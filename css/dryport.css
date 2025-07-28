@@ -1,0 +1,268 @@
+.dryport-section {
+    background: var(--second-background);
+    /* padding: 48px 0 32px 0; */
+    padding-top:5rem ;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+.dryport-title {
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 400;
+    margin-bottom: 2px;
+    color: var(--text);
+}
+
+.dryport-title .highlight {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.dryport1,
+.dryport2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.dryport-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.dryport-card,
+.dryport-card1 {
+    background: var(--button);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--button);
+    padding: 28px 24px 24px 24px;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 160px;
+    border-bottom: 4px solid var(--blue);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    height: 0px;
+}
+
+.dryport-card1 {
+    width: 300px;
+    height: 0px;
+}
+
+.dryport-card:hover {
+    background: var(--button-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(91, 168, 204, 0.3);
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 0;
+}
+
+.dryport-card1:hover {
+    background: var(--button-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(91, 168, 204, 0.3);
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 0;
+}
+
+.dryport-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 18px;
+    transition: opacity 0.3s ease;
+}
+
+.dryport-card:hover .dryport-icon,
+.dryport-card1:hover .dryport-icon {
+    opacity: 0;
+}
+
+.dryport-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.dryport-card:hover .dryport-name,
+.dryport-card1:hover .dryport-name {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.dryport-desc {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 0;
+    width: 15rem;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.dryport-card:hover .dryport-desc,
+.dryport-card1:hover .dryport-desc {
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Large background icon that appears on hover */
+.dryport-card::after,
+.dryport-card1::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-mask-image: url('/svg/construction6.svg');
+    mask-image: url('/svg/construction6.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show the large background icon on hover with slide-up animation */
+.dryport-card:hover::after,
+.dryport-card1:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Different icons for each service */
+.dryport-card:nth-child(1)::after {
+    -webkit-mask-image: url('/svg/construction6.svg');
+    mask-image: url('/svg/construction6.svg');
+}
+
+.dryport-card:nth-child(2)::after {
+    -webkit-mask-image: url('/svg/construction2.svg');
+    mask-image: url('/svg/construction2.svg');
+}
+
+.dryport-card:nth-child(3)::after {
+    -webkit-mask-image: url('/svg/construction3.svg');
+    mask-image: url('/svg/construction3.svg');
+}
+
+.dryport-card1:nth-child(1)::after {
+    -webkit-mask-image: url('/svg/construction1.svg');
+    mask-image: url('/svg/construction1.svg');
+}
+
+.dryport-card1:nth-child(2)::after {
+    -webkit-mask-image: url('/svg/construction5.svg');
+    mask-image: url('/svg/construction5.svg');
+}
+
+.dryport-card1:nth-child(3)::after {
+    -webkit-mask-image: url('/svg/construction4.svg');
+    mask-image: url('/svg/construction4.svg');
+}
+
+@media (max-width: 1134px) and (min-height: 825px) {
+    .dryport-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: auto;
+        height: auto;
+        padding: 0 10px;
+    }
+
+    .dryport1,
+    .dryport2 {
+        display: contents;
+    }
+
+    .dryport-card,
+    .dryport-card1 {
+        width: 100%;
+        min-width: 0;
+        height: 180px;
+        padding: 18px 12px 16px 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .dryport-grid {
+        flex-direction: column;
+        gap: 30px;
+        width: auto;
+        height: auto;
+        padding: 0 10px;
+    }
+
+    .dryport1,
+    .dryport2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dryport-card,
+    .dryport-card1 {
+        width: 100%;
+        min-width: 0;
+        height: 180px;
+        padding: 18px 12px 16px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dryport-grid {
+        flex-direction: column;
+        gap: 16px;
+        width: 85%;
+        height: auto;
+        padding: 0 5px;
+    }
+
+    .dryport1,
+    .dryport2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .dryport-card,
+    .dryport-card1 {
+        width: 100%;
+        min-width: 0;
+        height: 160px;
+        padding: 12px 8px 12px 8px;
+    }
+
+    .dryport-icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 10px;
+    }
+}

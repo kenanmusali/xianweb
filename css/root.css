@@ -1,0 +1,65 @@
+@import url('/css/font.css');
+@import url('/css/navbar.css');
+@import url('/css/news.css');
+@import url('/css/services.css');
+@import url('/css/solution.css');
+@import url('/css/faq.css');
+@import url('/css/map.css');
+@import url('/css/header.css');
+@import url('/css/footer.css');
+@import url('/css/patner.css');
+@import url('/css/construction.css');
+@import url('/css/dryport.css');
+@import url('/css/bignews.css');
+@import url('/css/bignewsimg.css');
+@import url('/css/fotogallery.css');
+@import url('/css/foto.css');
+@import url('/css/servicesimg.css');
+@import url('/css/servicesblog.css');
+@import url('/css/about.css');
+@import url('/css/aboutblog.css');
+@import url('/css/career.css');
+@import url('/css/announcement.css');
+@import url('/css/contactimg.css');
+@import url('/css/contacttous.css');
+@import url('/css/videoimg.css');
+@import url('/css/videocollection.css');
+@import url('/css/valueimg.css');
+@import url('/css/values.css');
+@import url('/css/mission.css');
+
+
+
+
+
+:root {
+    --text: #333333;
+    --background: #FBFCFF;
+    --blue: #66AAC7;
+    --grey: #f5f5f5;
+    --second-background: #F2F2F2;
+    --button: linear-gradient(to top right, #F6F6F6, #E8F5FA);
+    --button-hover: linear-gradient(to top right, #66AAC7, #4192B5);
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --border-color: #e0e0e0;
+    --nav-height: 105px;
+    --navbar1-height: 42px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    width: 100%;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+}

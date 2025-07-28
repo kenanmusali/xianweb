@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foto Gallery</title>
+    <link rel="stylesheet" href="/css/root.css" />
+  </head>
+  <body>
+   <div class="nav">
+      <div class="logo">
+        <img src="/img/logo.png" alt="Logo" />
+      </div>
+
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <img src="/svg/menu-svgrepo-com.svg" alt="Menu" class="menu-icon" />
+        <img src="/svg/close-svgrepo-com.svg" alt="Close" class="close-icon" />
+      </div>
+
+      <div class="nav-section">
+        <div class="navbar1">
+          <div class="themes">
+            <img src="/svg/theme.svg" alt="" />
+            <p>Themes</p>
+            <img class="img1" src="/svg/down.svg" alt="" />
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu">
+              <a href="#">dark</a>
+              <a href="#">light</a>
+              <a href="#">auto</a>
+            </div>
+          </div>
+          <hr class="nav-divider" />
+
+          <div class="language">
+            <img src="/svg/language.svg" alt="" />
+            <p>Language</p>
+            <img src="/svg/down.svg" alt="" />
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu">
+              <a href="#">aze</a>
+              <a href="#">eng</a>
+              <a href="#">zho</a>
+            </div>
+          </div>
+          <hr class="nav-divider" />
+
+          <div class="login-register">
+            <a href="#" class="user-link">Login</a>
+            <hr class="nav-divider" />
+            <a href="#" class="user-link">Register</a>
+          </div>
+        </div>
+
+        <div class="navbar2">
+          <div class="nav-about">
+            <a href="/about.html">Haqqımızda</a>
+            <img src="/svg/down.svg" alt="" />
+
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu">
+              <a href="/about.html">Şirkət haqqında</a>
+              <a href="/value.html">Dəyərlərimiz</a>
+              <a href="/patner.html">Strateji partnyorlar</a>
+              <a href="#">Daşıma marşurutları</a>
+            </div>
+          </div>
+
+          <a href="/services.html">Xidmətlər</a>
+
+          <div class="nav-media">
+            <a href="/media.html">Media</a>
+            <img src="/svg/down.svg" alt="" />
+
+            <!-- Media Dropdown Menu -->
+            <div class="dropdown-menu">
+              <a href="/bignews.html">Xəbərlər</a>
+              <a href="/fotogallary.html">Foto Qalereya</a>
+              <a href="/video.html">Video Qalereya</a>
+            </div>
+          </div>
+
+          <a href="/career.html">Karyera</a>
+          <a href="/contact.html">Əlaqə</a>
+          <div class="search-online">
+            <!-- Search box -->
+            <div class="search-container">
+              <input type="text" placeholder="Search" class="search-input" />
+              <button class="search-btn">
+                <img src="/svg/search.svg" alt="Search" />
+              </button>
+            </div>
+
+            <!-- CTA button -->
+            <button class="cta-button">
+              ONLINE BOOKING <img class="img1" src="/svg/down.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-container" id="mobileNav">
+      <div class="mobile-nav-content">
+        <div class="mobile-nav-header">
+          <div class="mobile-logo">
+            <img src="/img/logo.png" alt="Logo" />
+          </div>
+          <div class="hamburger-menu active" onclick="toggleMenu()">
+            <img src="/svg/menu-svgrepo-com.svg" alt="Menu" class="menu-icon" />
+            <img src="/svg/close-svgrepo-com.svg" alt="Close" class="close-icon" />
+          </div>
+        </div>
+
+        <div class="mobile-nav-main">
+          <div class="mobile-search-container">
+            <input
+              type="text"
+              placeholder="Search"
+              class="mobile-search-input"
+            />
+            <button class="search-btn">
+              <img src="/svg/search.svg" alt="Search" />
+            </button>
+          </div>
+
+          <div class="mobile-nav-group">
+            <div
+              class="mobile-nav-group-title"
+              onclick="toggleMobileGroup(this)"
+            >
+              Haqqımızda
+              <img src="/svg/down.svg" alt="" />
+            </div>
+            <div class="mobile-nav-links">
+              <a href="/about.html" class="mobile-nav-link">Şirkət haqqında</a>
+              <a href="/value.html" class="mobile-nav-link">Dəyərlərimiz</a>
+              <a href="/patner.html" class="mobile-nav-link">Strateji partnyorlar</a>
+              <a href="#" class="mobile-nav-link">Daşıma marşurutları</a>
+            </div>
+          </div>
+
+          <a href="/about.html" class="mobile-nav-link">Xidmətlər</a>
+
+          <div class="mobile-nav-group">
+            <div
+              class="mobile-nav-group-title"
+              onclick="toggleMobileGroup(this)"
+            >
+              Media
+              <img src="/svg/down.svg" alt="" />
+            </div>
+            <div class="mobile-nav-links">
+              <a href="/bignews.html" class="mobile-nav-link">Xəbərlər</a>
+              <a href="/fotogallary.html" class="mobile-nav-link">Foto Qalereya</a>
+              <a href="/video.html" class="mobile-nav-link">Video Qalereya</a>
+            </div>
+          </div>
+
+          <a href="/career.html" class="mobile-nav-link">Karyera</a>
+          <a href="/contact.html" class="mobile-nav-link">Əlaqə</a>
+
+          <div class="mobile-nav-group">
+            <div
+              class="mobile-nav-group-title"
+              onclick="toggleMobileGroup(this)"
+            >
+              Themes
+              <img src="/svg/down.svg" alt="" />
+            </div>
+            <div class="mobile-nav-links">
+              <a href="#" class="mobile-nav-link">dark</a>
+              <a href="#" class="mobile-nav-link">light</a>
+              <a href="#" class="mobile-nav-link">auto</a>
+            </div>
+          </div>
+
+          <div class="mobile-nav-group">
+            <div
+              class="mobile-nav-group-title"
+              onclick="toggleMobileGroup(this)"
+            >
+              Language
+              <img src="/svg/down.svg" alt="" />
+            </div>
+            <div class="mobile-nav-links">
+              <a href="#" class="mobile-nav-link">aze</a>
+              <a href="#" class="mobile-nav-link">eng</a>
+              <a href="#" class="mobile-nav-link">zho</a>
+            </div>
+          </div>
+
+          <div class="mobile-nav-group">
+            <div
+              class="mobile-nav-group-title"
+              onclick="toggleMobileGroup(this)"
+            >
+              Account
+              <img src="/svg/down.svg" alt="" />
+            </div>
+            <div class="mobile-nav-links">
+              <a href="#" class="mobile-nav-link">Login</a>
+              <a href="#" class="mobile-nav-link">Register</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-nav-footer">
+          <button class="mobile-cta-button">
+            ONLINE BOOKING <img class="img1" src="/svg/down.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="foto">
+      <div class="content">
+        <h2>Fotoqaleriya</h2>
+      </div>
+    </div>
+    <div class="fotogallery">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="img/fotogallery1.png" alt="Gallery Image 1" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery2.png" alt="Gallery Image 2" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery3.png" alt="Gallery Image 3" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery4.png" alt="Gallery Image 4" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery5.png" alt="Gallery Image 5" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery6.png" alt="Gallery Image 6" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery7.png" alt="Gallery Image 7" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery8.png" alt="Gallery Image 8" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery9.png" alt="Gallery Image 9" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery10.png" alt="Gallery Image 10" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery11.png" alt="Gallery Image 11" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery12.png" alt="Gallery Image 12" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery13.png" alt="Gallery Image 13" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery14.png" alt="Gallery Image 14" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery15.png" alt="Gallery Image 15" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/fotogallery16.png" alt="Gallery Image 16" />
+          <div class="gallery-item-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-bg">
+        <div class="footer-blur footer-blur-blue"></div>
+        <div class="footer-blur footer-blur-red"></div>
+      </div>
+      <div class="footer-content">
+        <div class="footer-col logo-col">
+          <img
+            src="/img/logo.png"
+            alt="XI'AN ASHBERON LOGISTICS"
+            class="footer-logo"
+          />
+        </div>
+
+        <div class="footer-main-sections">
+          <!-- First section: About, Media, Others -->
+          <div class="footer-section footer-section-left">
+            <div class="footer-col">
+              <h4>Haqqımızda</h4>
+              <a href="#">Şirkət haqqında</a>
+              <a href="#">Dəyərlərimiz</a>
+              <a href="#">Strateji partnyorlar</a>
+              <a href="#">Daşıma marşurutları</a>
+            </div>
+            <div class="footer-col">
+              <h4>Media</h4>
+              <a href="#">Xəbərlər</a>
+              <a href="#">Fotoqaleriya</a>
+              <a href="#">Videoqaleriya</a>
+            </div>
+            <div class="footer-col">
+              <h4>Digər</h4>
+              <a href="#">Xidmətlər</a>
+              <a href="#">Karyera</a>
+              <a href="#">Əlaqə</a>
+            </div>
+          </div>
+
+          <!-- Second section: Contact, Follow us -->
+          <div class="footer-section footer-section-right">
+            <div class="footer-col contact-col">
+              <h4>Contact</h4>
+              <a href="mailto:info@xianasberon.com">
+                <img src="/svg/mail.svg" alt="mail" class="footer-icon" />
+                info@xianasberon.com
+              </a>
+              <a href="#">
+                <img
+                  src="/svg/distance.svg"
+                  alt="location"
+                  class="footer-icon"
+                />
+                Room 401, No. 3399, Gangze road,<br />
+                Xi'an Chanba International Port,<br />
+                Xi'an, China
+              </a>
+              <a href="tel:+8615694823698">
+                <img src="/svg/call.svg" alt="phone" class="footer-icon" />
+                +86 15694823698
+              </a>
+              <a href="tel:+8613072936683" style="margin-left: 20px">
+                +86 13072936683
+              </a>
+            </div>
+            <div class="footer-col social-col">
+              <h4>Follow us</h4>
+              <div class="footer-social">
+                <a href="#"
+                  ><span class="footer-social-circle"
+                    ><img src="/svg/facebook.svg" alt="Facebook" /></span
+                ></a>
+                <a href="#"
+                  ><span class="footer-social-circle"
+                    ><img src="/svg/instagram.svg" alt="Instagram" /></span
+                ></a>
+                <a href="#"
+                  ><span class="footer-social-circle"
+                    ><img src="/svg/linkedin.svg" alt="LinkedIn" /></span
+                ></a>
+                <a href="#"
+                  ><span class="footer-social-circle"
+                    ><img src="/svg/x.svg" alt="X" /></span
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-links">
+          Legal | Terms of Use | Privacy Policy | Supply Chain Transparency
+        </div>
+        <div class="footer-copyright">© XI' AN 2025, All right reserved</div>
+      </div>
+    </footer>
+
+    <script src="/js/navbar.js"></script>
+  </body>
+</html>

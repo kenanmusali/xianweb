@@ -1,0 +1,89 @@
+.mission-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    background: url('/img/mission-map.png') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+}
+
+.mission-description {
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.mission-title {
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 400;
+    margin-bottom: 2px;
+    color: var(--text);
+}
+
+.mission-title .highlight {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-section {
+        height: 80vh;
+    }
+    
+    .mission {
+        padding-top: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .mission-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .mission-description {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mission-section {
+        height: 70vh;
+    }
+    
+    .mission {
+        padding-top: 40px;
+    }
+    
+    .mission-title {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+    
+    .mission-description {
+        font-size: 0.85rem;
+        margin-bottom: 25px;
+    }
+}

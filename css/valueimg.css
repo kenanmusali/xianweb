@@ -1,0 +1,78 @@
+.valueimg {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('/img/main-value.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 4rem 4rem 4rem;
+    
+    overflow: hidden;
+}
+
+.valueimg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #FFFFFF 0%, rgba(255,255,255,0) 70%);
+    z-index: 1;
+}
+
+.valueimg .content {
+    position: relative;
+    z-index: 2;
+    color: var(--text);
+}
+
+.valueimg .content h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.valueimg .content p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-left: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .valueimg {
+        padding: 0 2rem 2rem 2rem;
+        height: 400px;
+    }
+    
+    .valueimg .content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .valueimg .content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .valueimg {
+        padding: 0 1rem 1rem 1rem;
+        height: 350px;
+    }
+    
+    .valueimg .content h1 {
+        font-size: 2rem;
+    }
+    
+    .valueimg .content p {
+        font-size: 0.9rem;
+    }
+}

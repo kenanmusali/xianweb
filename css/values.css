@@ -1,0 +1,322 @@
+.values-section {
+    background: var(--background);
+    /* padding: 48px 0 32px 0; */
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    width: 100%;
+}
+
+.values-title {
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    color: var(--text);
+}
+
+.values-title .highlight {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.value-grp1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 60%;
+    height: 0%;
+}
+
+.values-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.value-card {
+    background: var(--button);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--button);
+    padding: 28px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+    /* align-items: flex-start; */
+    min-height: 160px;
+    border-bottom: 4px solid var(--blue);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    width: 320px;
+}
+
+.value-card:hover {
+    background: var(--button-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(91, 168, 204, 0.3);
+}
+
+.value-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 18px;
+    transition: opacity 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    opacity: 0;
+}
+
+.value-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
+.value-card:hover .value-name {
+    color: #ffffff;
+}
+
+.value-desc {
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 0;
+    width: 15rem;
+    transition: color 0.3s ease;
+}
+
+.value-card:hover .value-desc {
+    color: #ffffff;
+}
+
+/* Large background icon that appears on hover */
+.value-card::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-mask-image: url('/svg/value1.svg');
+    mask-image: url('/svg/value1.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show the large background icon on hover with slide-up animation */
+.value-card:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Different icons for each value - target cards within their parent groups */
+.value-grp1:nth-child(1) .value-card:nth-child(1)::after {
+    -webkit-mask-image: url('/svg/value1.svg');
+    mask-image: url('/svg/value1.svg');
+}
+
+.value-grp1:nth-child(1) .value-card:nth-child(2)::after {
+    -webkit-mask-image: url('/svg/value2.svg');
+    mask-image: url('/svg/value2.svg');
+}
+
+.value-grp1:nth-child(1) .value-card:nth-child(3)::after {
+    -webkit-mask-image: url('/svg/value3.svg');
+    mask-image: url('/svg/value3.svg');
+}
+
+.value-grp1:nth-child(2) .value-card:nth-child(1)::after {
+    -webkit-mask-image: url('/svg/value4.svg');
+    mask-image: url('/svg/value4.svg');
+}
+
+.value-grp1:nth-child(2) .value-card:nth-child(2)::after {
+    -webkit-mask-image: url('/svg/value5.svg');
+    mask-image: url('/svg/value5.svg');
+}
+
+/* Responsive styles for values section */
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .values-section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    
+    .values-title {
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+    }
+    
+    .values-title .highlight {
+        font-size: 2rem;
+    }
+    
+    .value-grp1 {
+        width: 80%;
+        gap: 25px;
+    }
+    
+    .value-card {
+        width: 280px;
+        height: 180px;
+        min-height: 140px;
+        padding: 24px 20px 20px 20px;
+    }
+    
+    .value-desc {
+        width: 13rem;
+    }
+}
+
+/* Small tablet styles */
+@media (max-width: 768px) {
+    .values-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    
+    .values-title {
+        font-size: 1.7rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .values-title .highlight {
+        font-size: 1.8rem;
+    }
+    
+    .value-grp1 {
+        width: 90%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .value-card {
+        width: 100%;
+        max-width: 350px;
+        height: 160px;
+        min-height: 120px;
+    }
+    
+    .value-desc {
+        width: 100%;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .values-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .values-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .values-title .highlight {
+        font-size: 1.6rem;
+    }
+    
+    .values-grid {
+        gap: 20px;
+    }
+    
+    .value-grp1 {
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .value-card {
+        width: 100%;
+        max-width: none;
+        height: 140px;
+        min-height: 100px;
+        padding: 20px 16px 16px 16px;
+    }
+    
+    .value-icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 12px;
+    }
+    
+    .value-name {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+    
+    .value-desc {
+        font-size: 12px;
+        width: 100%;
+    }
+    
+    .value-card::after {
+        width: 80px;
+        height: 80px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 320px) {
+    .values-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .values-title {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .values-title .highlight {
+        font-size: 1.4rem;
+    }
+    
+    .value-card {
+        height: 120px;
+        min-height: 90px;
+        padding: 16px 12px 12px 12px;
+    }
+    
+    .value-icon {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 10px;
+    }
+    
+    .value-name {
+        font-size: 0.9rem;
+    }
+    
+    .value-desc {
+        font-size: 11px;
+    }
+    
+    .value-card::after {
+        width: 60px;
+        height: 60px;
+        right: 10px;
+        bottom: 10px;
+    }
+}

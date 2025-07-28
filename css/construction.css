@@ -1,0 +1,208 @@
+.construction-section {
+    background: var(--background);
+    padding: 48px 0 32px 0;
+    width: 100%;
+}
+
+.construction-title {
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 400;
+    margin-bottom: 32px;
+    color:var(--text);
+}
+
+.construction-title .highlight {
+   font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.construction-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.construction-card {
+    background: var(--button);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--button);
+    padding: 28px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 160px;
+    border-bottom: 4px solid var(--blue);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 10px;
+    width: 300px;
+}
+
+.construction-card:hover {
+    background: var(--button-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(91, 168, 204, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.construction-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 18px;
+    transition: opacity 0.3s ease;
+}
+
+.construction-card:hover .construction-icon {
+    opacity: 0;
+}
+
+.construction-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
+.construction-card:hover .construction-name {
+    color: #ffffff;
+}
+
+.construction-desc {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 0;
+    width: 15rem;
+    transition: color 0.3s ease;
+}
+
+.construction-card:hover .construction-desc {
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Large background icon that appears on hover */
+.construction-card::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-mask-image: url('/svg/construction1.svg');
+    mask-image: url('/svg/construction1.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show the large background icon on hover with slide-up animation */
+.construction-card:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Different icons for each service - you'll need to add these */
+.construction-card:nth-child(1)::after {
+    -webkit-mask-image: url('/svg/construction1.svg');
+    mask-image: url('/svg/construction1.svg');
+}
+
+.construction-card:nth-child(2)::after {
+    -webkit-mask-image: url('/svg/construction2.svg');
+    mask-image: url('/svg/construction2.svg');
+}
+
+.construction-card:nth-child(3)::after {
+    -webkit-mask-image: url('/svg/construction3.svg');
+    mask-image: url('/svg/construction3.svg');
+}
+
+.construction-card:nth-child(4)::after {
+    -webkit-mask-image: url('/svg/construction4.svg');
+    mask-image: url('/svg/construction4.svg');
+}
+
+.construction-card:nth-child(5)::after {
+    -webkit-mask-image: url('/svg/construction5.svg');
+    mask-image: url('/svg/construction5.svg');
+}
+
+.construction-card:nth-child(6)::after {
+    -webkit-mask-image: url('/svg/construction6.svg');
+    mask-image: url('/svg/construction6.svg');
+}
+
+@media (max-width: 1134px) and (min-height: 825px) {
+    .construction-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: auto;
+        height: auto;
+        padding: 0 10px;
+    }
+
+    .construction-card {
+        width: 100%;
+        min-width: 0;
+        height: 180px;
+        padding: 18px 12px 16px 12px;
+    }
+}
+
+@media (max-width: 900px) {
+    .construction-grid {
+        grid-template-columns: repeat(2, 40%);
+        gap: 30px;
+        width: auto;
+        height: auto;
+        padding: 0 10px;
+    }
+    .construction-card {
+        width: 100%;
+        min-width: 0;
+        height: 180px;
+        padding: 18px 12px 16px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .construction-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 85%;
+        height: auto;
+        padding: 0 5px;
+    }
+    .construction-card {
+        width: 100%;
+        min-width: 0;
+        height: 160px;
+        padding: 12px 8px 12px 8px;
+    }
+
+    .construction-icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 10px;
+    }
+}
