@@ -45,6 +45,10 @@
      gap: 1.25rem;
  }
 
+.career {
+    display: none !important;
+}
+
  .themes,
  .language,
  .login-register {
@@ -55,6 +59,9 @@
      position: relative;
  }
 
+  .login-register {
+    display: none;
+  }
  .themes p,
  .language p {
      margin: 0;
