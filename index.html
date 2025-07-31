@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XI</title>
+  <title>XI'AN</title>
   <link rel="stylesheet" href="/css/root.css" />
 </head>
 
 <body>
+
   <div class="nav">
     <div class="logo">
       <a href="/">
@@ -19,189 +20,85 @@
     <div class="hamburger-menu" onclick="toggleMenu()">
       <img src="/svg/menu-svgrepo-com.svg" alt="Menu" class="menu-icon" />
       <img src="/svg/close-svgrepo-com.svg" alt="Close" class="close-icon" />
+
     </div>
 
     <div class="nav-section">
       <div class="navbar1">
         <div class="themes">
-          <img src="/svg/theme.svg" alt="" />
+          <img src="/svg/moon.svg" alt="" />
           <p>Themes</p>
-          <img class="img1" src="/svg/down.svg" alt="" />
+          <img class="img1" src="/svg/chevron.down.svg" alt="" />
           <!-- Dropdown Menu -->
           <div class="dropdown-menu">
-            <a href="#">dark</a>
-            <a href="#">light</a>
-            <a href="#">auto</a>
+            <div class="menu-items">
+              <a href="#">dark</a>
+              <a href="#">light</a>
+              <a href="#">auto</a>
+            </div>
           </div>
         </div>
         <hr class="nav-divider" />
 
         <div class="language">
-          <img src="/svg/language.svg" alt="" />
+          <img src="/svg/globe.svg" />
           <p>Language</p>
-          <img src="/svg/down.svg" alt="" />
+          <img src="/svg/chevron.down.svg" />
           <!-- Dropdown Menu -->
           <div class="dropdown-menu">
-            <a href="#">aze</a>
-            <a href="#">eng</a>
-            <a href="#">zho</a>
+            <div class="menu-items">
+              <a href="#">Azərbaycan dili</a>
+              <a href="#">English</a>
+              <a href="#">中文</a>
+            </div>
           </div>
-        </div>
-        <!-- <hr class="nav-divider" /> -->
-
-        <div class="login-register">
-          <a href="#" class="user-link">Login</a>
-          <hr class="nav-divider" />
-          <a href="#" class="user-link">Register</a>
         </div>
       </div>
 
       <div class="navbar2">
-    <a href="/">Ana  menu</a>
+        <a class="item" href="/">Ana menu</a>
 
         <div class="nav-about">
-          <a href="/about.html">Haqqımızda</a>
-          <img src="/svg/down.svg" alt="" />
+          <a class="item">Haqqımızda</a>
+          <img src="/svg/chevron.down.svg" alt="" />
 
           <!-- Dropdown Menu -->
           <div class="dropdown-menu">
 
+            <div class="menu-items">
+              <a href="/about.html">Şirkət haqqında</a>
+              <a href="/value.html">Dəyərlərimiz</a>
+              <a href="/patner.html">Strateji partnyorlar</a>
+            </div>
 
-            <a href="/about.html">Şirkət haqqında</a>
-            <a href="/value.html">Dəyərlərimiz</a>
-            <a href="/patner.html">Strateji partnyorlar</a>
-            <a href="#">Daşıma marşurutları</a>
           </div>
         </div>
 
         <a href="/services.html">Xidmətlər</a>
 
         <div class="nav-media">
-          <a href="/media.html">Media</a>
-          <img src="/svg/down.svg" alt="" />
+          <a class="item">Media</a>
+          <img src="/svg/chevron.down.svg" />
 
           <!-- Media Dropdown Menu -->
           <div class="dropdown-menu">
-            <a href="/bignews.html">Xəbərlər</a>
-            <a href="/fotogallary.html">Foto Qalereya</a>
-            <a href="/video.html">Video Qalereya</a>
+            <div class="menu-items">
+              <a href="/bignews.html">Xəbərlər</a>
+              <a href="/fotogallary.html">Foto Qalereya</a>
+              <a href="/video.html">Video Qalereya</a>
+            </div>
           </div>
         </div>
 
-        <a href="/career.html" class="career">Karyera</a>
         <a href="/contact.html">Əlaqə</a>
-        <div class="search-online">
-          <!-- Search box -->
-          <div class="search-container">
-            <input type="text" placeholder="Search" class="search-input" />
-            <button class="search-btn">
-              <img src="/svg/search.svg" alt="Search" />
-            </button>
-          </div>
 
-          <!-- CTA button -->
-          <button class="cta-button">
-            ONLINE BOOKING <img class="img1" src="/svg/down.svg" alt="" />
-          </button>
-        </div>
       </div>
     </div>
   </div>
-  <!-- Mobile Navigation -->
-  <div class="mobile-nav-container" id="mobileNav">
-    <div class="mobile-nav-content">
-      <div class="mobile-nav-header">
-        <div class="mobile-logo">
-          <img src="/img/logo.png" alt="Logo" />
-        </div>
-        <div class="hamburger-menu active" onclick="toggleMenu()">
-          <img src="/svg/menu-svgrepo-com.svg" alt="Menu" class="menu-icon" />
-          <img src="/svg/close-svgrepo-com.svg" alt="Close" class="close-icon" />
-        </div>
-      </div>
 
-      <div class="mobile-nav-main">
-        <div class="mobile-search-container">
-          <input type="text" placeholder="Search" class="mobile-search-input" />
-          <button class="search-btn">
-            <img src="/svg/search.svg" alt="Search" />
-          </button>
-        </div>
 
-        <div class="mobile-nav-group">
-          <div class="mobile-nav-group-title" onclick="toggleMobileGroup(this)">
-            Haqqımızda
-            <img src="/svg/down.svg" alt="" />
-          </div>
-          <div class="mobile-nav-links">
-            <a href="/about.html" class="mobile-nav-link">Şirkət haqqında</a>
-            <a href="/value.html" class="mobile-nav-link">Dəyərlərimiz</a>
-            <a href="/patner.html" class="mobile-nav-link">Strateji partnyorlar</a>
-            <a href="#" class="mobile-nav-link">Daşıma marşurutları</a>
-          </div>
-        </div>
 
-        <a href="/about.html" class="mobile-nav-link">Xidmətlər</a>
 
-        <div class="mobile-nav-group">
-          <div class="mobile-nav-group-title" onclick="toggleMobileGroup(this)">
-            Media
-            <img src="/svg/down.svg" alt="" />
-          </div>
-          <div class="mobile-nav-links">
-            <a href="/bignews.html" class="mobile-nav-link">Xəbərlər</a>
-            <a href="/fotogallary.html" class="mobile-nav-link">Foto Qalereya</a>
-            <a href="/video.html" class="mobile-nav-link">Video Qalereya</a>
-          </div>
-        </div>
-
-        <a href="/career.html" class="mobile-nav-link career">Karyera</a>
-        <a href="/contact.html" class="mobile-nav-link">Əlaqə</a>
-
-        <div class="mobile-nav-group">
-          <div class="mobile-nav-group-title" onclick="toggleMobileGroup(this)">
-            Themes
-            <img src="/svg/down.svg" alt="" />
-          </div>
-          <div class="mobile-nav-links">
-            <a href="#" class="mobile-nav-link">dark</a>
-            <a href="#" class="mobile-nav-link">light</a>
-            <a href="#" class="mobile-nav-link">auto</a>
-          </div>
-        </div>
-
-        <div class="mobile-nav-group">
-          <div class="mobile-nav-group-title" onclick="toggleMobileGroup(this)">
-            Language
-            <img src="/svg/down.svg" alt="" />
-          </div>
-          <div class="mobile-nav-links">
-            <a href="#" class="mobile-nav-link">aze</a>
-            <a href="#" class="mobile-nav-link">eng</a>
-            <a href="#" class="mobile-nav-link">zho</a>
-          </div>
-        </div>
-
-        <div class="mobile-nav-group">
-          <div class="mobile-nav-group-title" onclick="toggleMobileGroup(this)">
-            Account
-            <img src="/svg/down.svg" alt="" />
-          </div>
-          <div class="mobile-nav-links">
-            <a href="#" class="mobile-nav-link">Login</a>
-            <a href="#" class="mobile-nav-link">Register</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="mobile-nav-footer">
-        <button class="mobile-cta-button">
-          ONLINE BOOKING <img class="img1" src="/svg/down.svg" alt="" />
-        </button>
-      </div>
-    </div>
-  </div>
-  
   <div class="header">
     <div class="header-container">
       <div class="header-content">
@@ -216,9 +113,9 @@
           <img src="/svg/arrow-right.svg" alt="arrow" />
         </a>
       </div>
-      <div class="header-image">
+      <!-- <div class="header-image">
         <img src="/img/main.jpg" alt="Container ship at port" />
-      </div>
+      </div> -->
       <div class="world-map-bg">
         <img src="/img/back-map.png" alt="World map background" />
       </div>

@@ -1,47 +1,30 @@
+// MENU TOGGLE
 function toggleMenu() {
-  const hamburger = document.querySelector('.hamburger-menu');
-  const mobileNav = document.getElementById('mobileNav');
+  const navSection = document.querySelector('.nav-section');
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeIcon = document.querySelector('.close-icon');
 
-  hamburger.classList.toggle('active');
-  mobileNav.classList.toggle('active');
+  const isActive = navSection.classList.toggle('active');
 
-  // Toggle body scroll and prevent background scrolling when mobile nav is open
-  if (mobileNav.classList.contains('active')) {
-    document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.width = '100%';
+  if (isActive) {
+    menuIcon.style.display = 'none';
+    closeIcon.style.display = 'block';
   } else {
-    document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.width = '';
+    menuIcon.style.display = 'block';
+    closeIcon.style.display = 'none';
   }
 }
 
-function toggleMobileGroup(element) {
-  element.classList.toggle('active');
-  const links = element.nextElementSibling;
-  links.classList.toggle('active');
+// DROPDOWN TOGGLE (mobile)
+document.querySelectorAll('.nav-about > img, .nav-media > img, .themes > img.img1, .language > img:last-child').forEach((icon) => {
+  icon.addEventListener('click', (e) => {
+    const parent = e.target.closest('.nav-about, .nav-media, .themes, .language');
 
-  // Close other open dropdowns when opening a new one
-  if (element.classList.contains('active')) {
-    const allGroups = document.querySelectorAll('.mobile-nav-group');
-    allGroups.forEach(group => {
-      if (group !== element.parentElement && group.querySelector('.mobile-nav-group-title').classList.contains('active')) {
-        group.querySelector('.mobile-nav-group-title').classList.remove('active');
-        group.querySelector('.mobile-nav-links').classList.remove('active');
-      }
+    // Close others
+    document.querySelectorAll('.nav-about, .nav-media, .themes, .language').forEach((el) => {
+      if (el !== parent) el.classList.remove('open');
     });
-  }
-}
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', function (event) {
-  const mobileNav = document.getElementById('mobileNav');
-  const hamburger = document.querySelector('.hamburger-menu');
-
-  if (mobileNav.classList.contains('active') &&
-    !event.target.closest('.mobile-nav-content') &&
-    !event.target.closest('.hamburger-menu')) {
-    toggleMenu();
-  }
+    parent.classList.toggle('open');
+  });
 });

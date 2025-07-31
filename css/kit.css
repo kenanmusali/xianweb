@@ -1,0 +1,17 @@
+:root {
+    --text: #333333;
+    --background: #FBFCFF;
+    --cyan: #66AAC7;
+    --cyan1: #29799b;
+    --cyan1-filter: brightness(0) saturate(100%) invert(35%) sepia(73%) saturate(441%) hue-rotate(152deg) brightness(100%) contrast(90%);
+    --light-cyan: #C9E3EE;
+    --grey: #f5f5f5;
+    --white: #ffffff;
+    --second-background: #F2F2F2;
+    --button: linear-gradient(to top right, #F6F6F6, #E8F5FA);
+    --button-hover: linear-gradient(to top right, #66AAC7, #4192B5);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow2: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --border-color: #e4e4e4;
+
+}
