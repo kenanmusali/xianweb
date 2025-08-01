@@ -6,22 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XI'AN</title>
   <link rel="stylesheet" href="/css/root.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-
-  <div class="nav">
+  <div class="nav desktop">
     <div class="logo">
       <a href="/">
         <img src="/img/logo.png" alt="Logo" />
       </a>
     </div>
 
-    <div class="hamburger-menu" onclick="toggleMenu()">
-      <img src="/svg/menu-svgrepo-com.svg" alt="Menu" class="menu-icon" />
-      <img src="/svg/close-svgrepo-com.svg" alt="Close" class="close-icon" />
-
-    </div>
 
     <div class="nav-section">
       <div class="navbar1">
@@ -29,7 +24,6 @@
           <img src="/svg/moon.svg" alt="" />
           <p>Themes</p>
           <img class="img1" src="/svg/chevron.down.svg" alt="" />
-          <!-- Dropdown Menu -->
           <div class="dropdown-menu">
             <div class="menu-items">
               <a href="#">dark</a>
@@ -44,25 +38,23 @@
           <img src="/svg/globe.svg" />
           <p>Language</p>
           <img src="/svg/chevron.down.svg" />
-          <!-- Dropdown Menu -->
           <div class="dropdown-menu">
             <div class="menu-items">
-              <a href="#">Azərbaycan dili</a>
-              <a href="#">English</a>
-              <a href="#">中文</a>
+              <a href="#">AZ-Azərbaycan dili</a>
+              <a href="#">UK-English</a>
+              <a href="#">ZHO-中文</a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="navbar2">
-        <a class="item" href="/">Ana menu</a>
+        <a class="item nav-home" href="/">Ana menu</a>
 
         <div class="nav-about">
           <a class="item">Haqqımızda</a>
           <img src="/svg/chevron.down.svg" alt="" />
 
-          <!-- Dropdown Menu -->
           <div class="dropdown-menu">
 
             <div class="menu-items">
@@ -74,13 +66,12 @@
           </div>
         </div>
 
-        <a href="/services.html">Xidmətlər</a>
+        <a href="/services.html" class="nav-services">Xidmətlər</a>
 
         <div class="nav-media">
           <a class="item">Media</a>
           <img src="/svg/chevron.down.svg" />
 
-          <!-- Media Dropdown Menu -->
           <div class="dropdown-menu">
             <div class="menu-items">
               <a href="/bignews.html">Xəbərlər</a>
@@ -91,6 +82,103 @@
         </div>
 
         <a href="/contact.html">Əlaqə</a>
+
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="nav mobile">
+    <div class="logo">
+      <a href="/">
+        <img src="/img/logo.png" alt="Logo" />
+      </a>
+    </div>
+
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <img src="/svg/menu-svgrepo-com.svg" alt="Menu" class="menu-icon" />
+      <img src="/svg/close-svgrepo-com.svg" alt="Close" class="close-icon" />
+
+    </div>
+
+    <div class="nav-section">
+
+
+      <div class="navbar2">
+
+
+        <div class="nav-about">
+          <span>
+            <a class="item">Themes</a>
+            <img src="/svg/chevron.down.svg" alt="" />
+          </span>
+          <div class="dropdown-menu">
+
+            <div class="menu-items">
+              <a href="#">dark</a>
+              <a href="#">light</a>
+              <a href="#">auto</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="nav-about">
+          <span>
+            <a class="item">Language</a>
+            <img src="/svg/chevron.down.svg" alt="" />
+          </span>
+          <div class="dropdown-menu">
+
+            <div class="menu-items">
+              <a href="#">AZ-Azərbaycan dili</a>
+              <a href="#">UK-English</a>
+              <a href="#">ZHO-中文</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="nav-about">
+          <span>
+            <a class="item">Haqqımızda</a>
+            <img src="/svg/chevron.down.svg" alt="" />
+          </span>
+          <div class="dropdown-menu">
+
+            <div class="menu-items">
+              <a href="/about.html">Şirkət haqqında</a>
+              <a href="/value.html">Dəyərlərimiz</a>
+              <a href="/patner.html">Strateji partnyorlar</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="nav-media">
+          <a class="item nav-home" href="/">Ana menu</a>
+        </div>
+        <div class="nav-media">
+          <a href="/services.html" class="nav-services">Xidmətlər</a>
+        </div>
+
+        <div class="nav-media">
+          <span>
+            <a class="item">Media</a>
+            <img src="/svg/chevron.down.svg" />
+          </span>
+          <div class="dropdown-menu">
+            <div class="menu-items">
+              <a href="/bignews.html">Xəbərlər</a>
+              <a href="/fotogallary.html">Foto Qalereya</a>
+              <a href="/video.html">Video Qalereya</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-media">
+          <span>
+            <a href="/contact.html">Əlaqə</a>
+          </span>
+        </div>
 
       </div>
     </div>
