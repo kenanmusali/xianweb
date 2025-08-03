@@ -1,471 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deyerler</title>
-    <link rel="stylesheet" href="/css/root.css" />
-  </head>
-  <body>
-    <div class="nav">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deyerler</title>
+  <link rel="stylesheet" href="/css/root.css" />
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="nav-space"></div>
+
+    <div class="nav desktop">
       <div class="logo">
         <a href="/">
-        <img src="/img/logo.png" alt="Logo" />
-      </a>
+          <img src="/img/logo.png" alt="Logo" />
+        </a>
       </div>
 
-      <div class="hamburger-menu" onclick="toggleMenu()">
-        <img src="/svg/menu-svgrepo-com.svg" alt="Menu" class="menu-icon" />
-        <img src="/svg/close-svgrepo-com.svg" alt="Close" class="close-icon" />
-      </div>
 
       <div class="nav-section">
         <div class="navbar1">
           <div class="themes">
-            <img src="/svg/theme.svg" alt="" />
+            <img src="/svg/moon.svg" alt="" />
             <p>Themes</p>
-            <img class="img1" src="/svg/down.svg" alt="" />
-            <!-- Dropdown Menu -->
+            <img class="img1" src="/svg/chevron.down.svg" alt="" />
             <div class="dropdown-menu">
-              <a href="#">dark</a>
-              <a href="#">light</a>
-              <a href="#">auto</a>
+              <div class="menu-items">
+                <a href="#">dark</a>
+                <a href="#">light</a>
+                <a href="#">auto</a>
+              </div>
             </div>
           </div>
           <hr class="nav-divider" />
 
           <div class="language">
-            <img src="/svg/language.svg" alt="" />
+            <img src="/svg/globe.svg" />
             <p>Language</p>
-            <img src="/svg/down.svg" alt="" />
-            <!-- Dropdown Menu -->
+            <img src="/svg/chevron.down.svg" />
             <div class="dropdown-menu">
-              <a href="#">aze</a>
-              <a href="#">eng</a>
-              <a href="#">zho</a>
-            </div>
-          </div>
-          <hr class="nav-divider" />
-
-          <div class="login-register">
-            <a href="#" class="user-link">Login</a>
-            <hr class="nav-divider" />
-            <a href="#" class="user-link">Register</a>
-          </div>
-        </div>
-
-                <div class="navbar2">
-    <a href="/">Ana menu</a>
-    <a href="/">Ana menu</a>
-          <div class="nav-about">
-            <a href="/about.html">Haqqımızda</a>
-            <img src="/svg/down.svg" alt="" />
-
-            <!-- Dropdown Menu -->
-                        <div class="dropdown-menu">
-            
-
-              <a href="/about.html">Şirkət haqqında</a>
-              <a href="/value.html">Dəyərlərimiz</a>
-              <a href="/patner.html">Strateji partnyorlar</a>
-              <a href="#">Daşıma marşurutları</a>
-            </div>
-          </div>
-
-          <a href="/services.html">Xidmətlər</a>
-
-          <div class="nav-media">
-            <a href="/media.html">Media</a>
-            <img src="/svg/down.svg" alt="" />
-
-            <!-- Media Dropdown Menu -->
-            <div class="dropdown-menu">
-              <a href="/bignews.html">Xəbərlər</a>
-              <a href="/fotogallary.html">Foto Qalereya</a>
-              <a href="/video.html">Video Qalereya</a>
-            </div>
-          </div>
-
-          <a href="/career.html">Karyera</a>
-          <a href="/contact.html">Əlaqə</a>
-          <div class="search-online">
-            <!-- Search box -->
-            <div class="search-container">
-              <input type="text" placeholder="Search" class="search-input" />
-              <button class="search-btn">
-                <img src="/svg/search.svg" alt="Search" />
-              </button>
-            </div>
-
-            <!-- CTA button -->
-            <button class="cta-button">
-              ONLINE BOOKING <img class="img1" src="/svg/down.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav-container" id="mobileNav">
-      <div class="mobile-nav-content">
-        <div class="mobile-nav-header">
-          <div class="mobile-logo">
-            <img src="/img/logo.png" alt="Logo" />
-          </div>
-          <div class="hamburger-menu active" onclick="toggleMenu()">
-            <img src="/svg/menu-svgrepo-com.svg" alt="Menu" class="menu-icon" />
-            <img
-              src="/svg/close-svgrepo-com.svg"
-              alt="Close"
-              class="close-icon"
-            />
-          </div>
-        </div>
-
-        <div class="mobile-nav-main">
-          <div class="mobile-search-container">
-            <input
-              type="text"
-              placeholder="Search"
-              class="mobile-search-input"
-            />
-            <button class="search-btn">
-              <img src="/svg/search.svg" alt="Search" />
-            </button>
-          </div>
-
-          <div class="mobile-nav-group">
-            <div
-              class="mobile-nav-group-title"
-              onclick="toggleMobileGroup(this)"
-            >
-              Haqqımızda
-              <img src="/svg/down.svg" alt="" />
-            </div>
-            <div class="mobile-nav-links">
-              <a href="/about.html" class="mobile-nav-link">Şirkət haqqında</a>
-              <a href="/value.html" class="mobile-nav-link">Dəyərlərimiz</a>
-              <a href="/patner.html" class="mobile-nav-link"
-                >Strateji partnyorlar</a
-              >
-              <a href="#" class="mobile-nav-link">Daşıma marşurutları</a>
-            </div>
-          </div>
-
-          <a href="/about.html" class="mobile-nav-link">Xidmətlər</a>
-
-          <div class="mobile-nav-group">
-            <div
-              class="mobile-nav-group-title"
-              onclick="toggleMobileGroup(this)"
-            >
-              Media
-              <img src="/svg/down.svg" alt="" />
-            </div>
-            <div class="mobile-nav-links">
-              <a href="/bignews.html" class="mobile-nav-link">Xəbərlər</a>
-              <a href="/fotogallary.html" class="mobile-nav-link"
-                >Foto Qalereya</a
-              >
-              <a href="/video.html" class="mobile-nav-link">Video Qalereya</a>
-            </div>
-          </div>
-
-          <a href="/career.html" class="mobile-nav-link">Karyera</a>
-          <a href="/contact.html" class="mobile-nav-link">Əlaqə</a>
-
-          <div class="mobile-nav-group">
-            <div
-              class="mobile-nav-group-title"
-              onclick="toggleMobileGroup(this)"
-            >
-              Themes
-              <img src="/svg/down.svg" alt="" />
-            </div>
-            <div class="mobile-nav-links">
-              <a href="#" class="mobile-nav-link">dark</a>
-              <a href="#" class="mobile-nav-link">light</a>
-              <a href="#" class="mobile-nav-link">auto</a>
-            </div>
-          </div>
-
-          <div class="mobile-nav-group">
-            <div
-              class="mobile-nav-group-title"
-              onclick="toggleMobileGroup(this)"
-            >
-              Language
-              <img src="/svg/down.svg" alt="" />
-            </div>
-            <div class="mobile-nav-links">
-              <a href="#" class="mobile-nav-link">aze</a>
-              <a href="#" class="mobile-nav-link">eng</a>
-              <a href="#" class="mobile-nav-link">zho</a>
-            </div>
-          </div>
-
-          <div class="mobile-nav-group">
-            <div
-              class="mobile-nav-group-title"
-              onclick="toggleMobileGroup(this)"
-            >
-              Account
-              <img src="/svg/down.svg" alt="" />
-            </div>
-            <div class="mobile-nav-links">
-              <a href="#" class="mobile-nav-link">Login</a>
-              <a href="#" class="mobile-nav-link">Register</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="mobile-nav-footer">
-          <button class="mobile-cta-button">
-            ONLINE BOOKING <img class="img1" src="/svg/down.svg" alt="" />
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="valueimg">
-      <div class="content">
-        <h2>Deyerlerimiz</h2>
-      </div>
-    </div>
-    <section class="values-section">
-      <h2 class="values-title">
-        Our Logistic <span class="highlight">Values</span>
-      </h2>
-      <div class="values-grid">
-        <div class="value-grp1">
-          <div class="value-card">
-            <img src="/svg/value1.svg" alt="Truckload" class="value-icon" />
-            <h3 class="value-name">Integrity</h3>
-            <p class="value-desc">
-              Integrity means earning the trust of ourselves, our customers and
-              partners
-            </p>
-          </div>
-          <div class="value-card">
-            <img src="/svg/value2.svg" alt="LTL" class="value-icon" />
-            <h3 class="value-name">Innovation</h3>
-            <p class="value-desc">
-              In our work, we constantly organize innovative solutions
-            </p>
-          </div>
-          <div class="value-card">
-            <img src="/svg/value3.svg" alt="Intermodal" class="value-icon" />
-            <h3 class="value-name">Professionalism</h3>
-            <p class="value-desc">
-              Professional and personal development of our employees is
-              essential for our company
-            </p>
-          </div>
-        </div>
-        <div class="value-grp1">
-          <div class="value-card">
-            <img src="/svg/value4.svg" alt="Ocean" class="value-icon" />
-            <h3 class="value-name">Security</h3>
-            <p class="value-desc">
-              Creating a safe working environment, providing high-level services
-              and preventi...
-            </p>
-          </div>
-          <div class="value-card">
-            <img src="/svg/value5.svg" alt="Warehouse" class="value-icon" />
-            <h3 class="value-name">Sustainability</h3>
-            <p class="value-desc">
-              We minimize the impact on the environment in all aspects of our
-              activities
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="dryport">
-      <section class="dryport-section">
-        <h2 class="dryport-title">
-          Our
-          <span class="highlight"> Advantages</span>
-        </h2>
-
-        <div class="dryport-grid">
-          <div class="dryport1">
-            <div class="dryport-card">
-              <img
-                src="/svg/construction6.svg"
-                alt="Truckload"
-                class="dryport-icon"
-              />
-              <p class="dryport-desc">Provision of efficient services</p>
-            </div>
-            <div class="dryport-card">
-              <img
-                src="/svg/construction2.svg"
-                alt="LTL"
-                class="dryport-icon"
-              />
-              <p class="dryport-desc">
-                A professional team that is flexible and ready for innovations
-              </p>
-            </div>
-            <div class="dryport-card">
-              <img
-                src="/svg/construction3.svg"
-                alt="Intermodal"
-                class="dryport-icon"
-              />
-              <p class="dryport-desc">
-                Planning the most suitable transportation routes
-              </p>
-            </div>
-          </div>
-
-          <div class="dryport2">
-            <div class="dryport-card1">
-              <img
-                src="/svg/construction1.svg"
-                alt="Ocean"
-                class="dryport-icon"
-              />
-              <p class="dryport-desc">
-                Implementation of all necessary operations carried out by us in
-                the most cost-effective way
-              </p>
-            </div>
-            <div class="dryport-card1">
-              <img
-                src="/svg/construction5.svg"
-                alt="Warehouse"
-                class="dryport-icon"
-              />
-              <p class="dryport-desc">
-                Providing all types of terminal services at the origin/departure
-                point and destination
-              </p>
-            </div>
-            <div class="dryport-card1">
-              <img
-                src="/svg/construction4.svg"
-                alt="Warehouse"
-                class="dryport-icon"
-              />
-              <p class="dryport-desc">
-                Providing high-quality services to our customers
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <section class="mission-section">
-      <div class="mission">
-        <h2 class="mission-title">Our <span class="highlight">Mission</span></h2>
-        <p class="mission-description">
-          To be the first choice business partner for logistics services between
-          China and European Asian countries
-        </p>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-bg">
-        <div class="footer-blur footer-blur-blue"></div>
-        <div class="footer-blur footer-blur-red"></div>
-      </div>
-      <div class="footer-content">
-        <div class="footer-col logo-col">
-          <img
-            src="/img/logo.png"
-            alt="XI'AN ASHBERON LOGISTICS"
-            class="footer-logo"
-          />
-        </div>
-
-        <div class="footer-main-sections">
-          <!-- First section: About, Media, Others -->
-          <div class="footer-section footer-section-left">
-            <div class="footer-col">
-              <h4>Haqqımızda</h4>
-              <a href="#">Şirkət haqqında</a>
-              <a href="#">Dəyərlərimiz</a>
-              <a href="#">Strateji partnyorlar</a>
-              <a href="#">Daşıma marşurutları</a>
-            </div>
-            <div class="footer-col">
-              <h4>Media</h4>
-              <a href="#">Xəbərlər</a>
-              <a href="#">Fotoqaleriya</a>
-              <a href="#">Videoqaleriya</a>
-            </div>
-            <div class="footer-col">
-              <h4>Digər</h4>
-              <a href="#">Xidmətlər</a>
-              <a href="#">Karyera</a>
-              <a href="#">Əlaqə</a>
-            </div>
-          </div>
-
-          <!-- Second section: Contact, Follow us -->
-          <div class="footer-section footer-section-right">
-            <div class="footer-col contact-col">
-              <h4>Contact</h4>
-              <a href="mailto:info@xianasberon.com">
-                <img src="/svg/mail.svg" alt="mail" class="footer-icon" />
-                info@xianasberon.com
-              </a>
-              <a href="#">
-                <img
-                  src="/svg/distance.svg"
-                  alt="location"
-                  class="footer-icon"
-                />
-                Room 401, No. 3399, Gangze road,<br />
-                Xi'an Chanba International Port,<br />
-                Xi'an, China
-              </a>
-              <a href="tel:+8615694823698">
-                <img src="/svg/call.svg" alt="phone" class="footer-icon" />
-                +86 15694823698
-              </a>
-              <a href="tel:+8613072936683" style="margin-left: 20px">
-                +86 13072936683
-              </a>
-            </div>
-            <div class="footer-col social-col">
-              <h4>Follow us</h4>
-              <div class="footer-social">
-                <a href="#"
-                  ><span class="footer-social-circle"
-                    ><img src="/svg/facebook.svg" alt="Facebook" /></span
-                ></a>
-                <a href="#"
-                  ><span class="footer-social-circle"
-                    ><img src="/svg/instagram.svg" alt="Instagram" /></span
-                ></a>
-                <a href="#"
-                  ><span class="footer-social-circle"
-                    ><img src="/svg/linkedin.svg" alt="LinkedIn" /></span
-                ></a>
-                <a href="#"
-                  ><span class="footer-social-circle"
-                    ><img src="/svg/x.svg" alt="X" /></span
-                ></a>
+              <div class="menu-items">
+                <a href="#">AZ-Azərbaycan dili</a>
+                <a href="#">UK-English</a>
+                <a href="#">ZHO-中文</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="footer-bottom">
-        <div class="footer-links">
-          Legal | Terms of Use | Privacy Policy | Supply Chain Transparency
+        <div class="navbar2">
+          <a class="item nav-home" href="/">Ana menu</a>
+
+          <div class="nav-about">
+            <a class="item">Haqqımızda</a>
+            <img src="/svg/chevron.down.svg" alt="" />
+
+            <div class="dropdown-menu">
+
+              <div class="menu-items">
+                <a href="/about.html">Şirkət haqqında</a>
+                <a href="/value.html">Dəyərlərimiz</a>
+                <a href="/patner.html">Strateji partnyorlar</a>
+              </div>
+
+            </div>
+          </div>
+
+          <a href="/services.html" class="nav-services">Xidmətlər</a>
+
+          <div class="nav-media">
+            <a class="item">Media</a>
+            <img src="/svg/chevron.down.svg" />
+
+            <div class="dropdown-menu">
+              <div class="menu-items">
+                <a href="/news.html">Xəbərlər</a>
+                <a href="/fotogallary.html">Foto Qalereya</a>
+                <a href="/video.html">Video Qalereya</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="/contact.html">Əlaqə</a>
+
         </div>
-        <div class="footer-copyright">© XI' AN 2025, All right reserved</div>
       </div>
-    </footer>
+    </div>
 
-    <script src="/js/navbar.js"></script>
-  </body>
+
+    <div class="nav mobile">
+      <div class="logo">
+        <a href="/">
+          <img src="/img/logo.png" alt="Logo" />
+        </a>
+      </div>
+
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <img src="/svg/menu-svgrepo-com.svg" alt="Menu" class="menu-icon" />
+        <img src="/svg/close-svgrepo-com.svg" alt="Close" class="close-icon" />
+
+      </div>
+
+      <div class="nav-section">
+
+
+        <div class="navbar2">
+
+
+          <div class="nav-about">
+            <span>
+              <a class="item">Themes</a>
+              <img src="/svg/chevron.down.svg" alt="" />
+            </span>
+            <div class="dropdown-menu">
+
+              <div class="menu-items">
+                <a href="#">dark</a>
+                <a href="#">light</a>
+                <a href="#">auto</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="nav-about">
+            <span>
+              <a class="item">Language</a>
+              <img src="/svg/chevron.down.svg" alt="" />
+            </span>
+            <div class="dropdown-menu">
+
+              <div class="menu-items">
+                <a href="#">AZ-Azərbaycan dili</a>
+                <a href="#">UK-English</a>
+                <a href="#">ZHO-中文</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="nav-about">
+            <span>
+              <a class="item">Haqqımızda</a>
+              <img src="/svg/chevron.down.svg" alt="" />
+            </span>
+            <div class="dropdown-menu">
+
+              <div class="menu-items">
+                <a href="/about.html">Şirkət haqqında</a>
+                <a href="/value.html">Dəyərlərimiz</a>
+                <a href="/patner.html">Strateji partnyorlar</a>
+              </div>
+
+            </div>
+          </div>
+          <div class="nav-media">
+            <a class="item nav-home" href="/">Ana menu</a>
+          </div>
+          <div class="nav-media">
+            <a href="/services.html" class="nav-services">Xidmətlər</a>
+          </div>
+
+          <div class="nav-media">
+            <span>
+              <a class="item">Media</a>
+              <img src="/svg/chevron.down.svg" />
+            </span>
+            <div class="dropdown-menu">
+              <div class="menu-items">
+                <a href="/news.html">Xəbərlər</a>
+                <a href="/fotogallary.html">Foto Qalereya</a>
+                <a href="/video.html">Video Qalereya</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-media">
+            <span>
+              <a href="/contact.html">Əlaqə</a>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="aboutimg valueimg">
+    <div class="content">
+      <h2>Dəyərlərimiz</h2>
+    </div>
+  </div>
+  </div>
+
+
+
+  <section class="values-section">
+    <h2 class="values-title">
+      Our Logistic <span class="highlight">Values</span>
+    </h2>
+    <div class="values-grid">
+      <div class="value-grp1">
+        <div class="value-card">
+          <img src="/svg/value1.svg" alt="Truckload" class="value-icon" />
+          <h3 class="value-name">Integrity</h3>
+          <p class="value-desc">
+            Integrity means earning the trust of ourselves, our customers and
+            partners
+          </p>
+        </div>
+        <div class="value-card">
+          <img src="/svg/value2.svg" alt="LTL" class="value-icon" />
+          <h3 class="value-name">Innovation</h3>
+          <p class="value-desc">
+            In our work, we constantly organize innovative solutions
+          </p>
+        </div>
+        <div class="value-card">
+          <img src="/svg/value3.svg" alt="Intermodal" class="value-icon" />
+          <h3 class="value-name">Professionalism</h3>
+          <p class="value-desc">
+            Professional and personal development of our employees is
+            essential for our company
+          </p>
+        </div>
+      </div>
+      <div class="value-grp1">
+        <div class="value-card">
+          <img src="/svg/value4.svg" alt="Ocean" class="value-icon" />
+          <h3 class="value-name">Security</h3>
+          <p class="value-desc">
+            Creating a safe working environment, providing high-level services
+            and preventi...
+          </p>
+        </div>
+        <div class="value-card">
+          <img src="/svg/value5.svg" alt="Warehouse" class="value-icon" />
+          <h3 class="value-name">Sustainability</h3>
+          <p class="value-desc">
+            We minimize the impact on the environment in all aspects of our
+            activities
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="dryport">
+    <section class="dryport-section">
+      <h2 class="services-title">
+        Our <span class="highlight">Advantages</span>
+      </h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="/svg/construction6.svg" alt="Truckload" class="service-icon" />
+          <h3 class="service-name">Provision of efficient services</h3>
+          <p class="service-desc">
+            Full-capacity freight solutions for direct, efficient long-haul
+            transportation.
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="/svg/construction2.svg" alt="LTL" class="service-icon" />
+          <h3 class="service-name">Shipping</h3>
+          <p class="service-desc">
+            A professional team that is flexible and ready for innovations
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="/svg/construction3.svg" alt="Ocean" class="service-icon" />
+          <h3 class="service-name">Package</h3>
+          <p class="service-desc">
+            Planning the most suitable transportation routes
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="/svg/construction1.svg" alt="Warehouse" class="service-icon" />
+          <h3 class="service-name">Eco</h3>
+          <p class="service-desc">
+            Implementation of all necessary operations carried out by us in the most cost-effective way
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="/svg/construction5.svg" alt="Supply Chain" class="service-icon" />
+          <h3 class="service-name">Terminal services</h3>
+          <p class="service-desc">
+            Providing all types of terminal services at the origin/departure point and destination
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="/svg/construction4.svg" alt="Supply Chain" class="service-icon" />
+          <h3 class="service-name">Supply Chain</h3>
+          <p class="service-desc">
+            Providing high-quality services to our customers
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+  <section class="mission-section">
+    <div class="mission">
+      <h2 class="mission-title">Our <span class="highlight">Mission</span></h2>
+      <p class="mission-description">
+        To be the first choice business partner for logistics services between
+        China and European Asian countries
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-bg">
+      <div class="footer-blur footer-blur-blue"></div>
+      <div class="footer-blur footer-blur-red"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-col logo-col">
+        <img src="/img/logo.png" alt="XI'AN ASHBERON LOGISTICS" class="footer-logo" />
+      </div>
+
+      <div class="footer-main-sections">
+        <!-- First section: About, Media, Others -->
+        <div class="footer-section footer-section-left">
+          <div class="footer-col">
+            <h4>Haqqımızda</h4>
+            <a href="#">Şirkət haqqında</a>
+            <a href="#">Dəyərlərimiz</a>
+            <a href="#">Strateji partnyorlar</a>
+            <a href="#">Daşıma marşurutları</a>
+          </div>
+          <div class="footer-col">
+            <h4>Media</h4>
+            <a href="#">Xəbərlər</a>
+            <a href="#">Fotoqaleriya</a>
+            <a href="#">Videoqaleriya</a>
+          </div>
+          <div class="footer-col">
+            <h4>Digər</h4>
+            <a href="#">Xidmətlər</a>
+            <a href="#">Karyera</a>
+            <a href="#">Əlaqə</a>
+          </div>
+        </div>
+
+        <!-- Second section: Contact, Follow us -->
+        <div class="footer-section footer-section-right">
+          <div class="footer-col contact-col">
+            <h4>Contact</h4>
+            <a href="mailto:info@xianasberon.com">
+              <img src="/svg/mail.svg" alt="mail" class="footer-icon" />
+              info@xianasberon.com
+            </a>
+            <a href="#">
+              <img src="/svg/distance.svg" alt="location" class="footer-icon" />
+              Room 401, No. 3399, Gangze road,<br />
+              Xi'an Chanba International Port,<br />
+              Xi'an, China
+            </a>
+            <a href="tel:+8615694823698">
+              <img src="/svg/call.svg" alt="phone" class="footer-icon" />
+              +86 15694823698
+            </a>
+            <a href="tel:+8613072936683" style="margin-left: 20px">
+              +86 13072936683
+            </a>
+          </div>
+          <div class="footer-col social-col">
+            <h4>Follow us</h4>
+            <div class="footer-social">
+              <a href="#"><span class="footer-social-circle"><img src="/svg/facebook.svg" alt="Facebook" /></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/instagram.svg" alt="Instagram" /></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/linkedin.svg" alt="LinkedIn" /></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/x.svg" alt="X" /></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-links">
+        Legal | Terms of Use | Privacy Policy | Supply Chain Transparency
+      </div>
+      <div class="footer-copyright">© XI' AN 2025, All right reserved</div>
+    </div>
+  </footer>
+
+  <script src="/js/navbar.js"></script>
+</body>
+
 </html>

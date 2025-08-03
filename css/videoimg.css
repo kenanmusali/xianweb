@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: 500px;
-    background-image: url('/img/video.png');
+    background-image: url('/img/video.png') !important;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,6 +37,7 @@
     margin-bottom: 1rem;
     line-height: 1.2;
     letter-spacing: -0.02em;
+    color: black;
 }
 
 .videoimg .content p {

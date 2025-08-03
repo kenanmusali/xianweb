@@ -25,7 +25,7 @@ document.querySelectorAll('.mobile .nav-about, .mobile .nav-media, .mobile .them
         e.stopPropagation();
 
         const dropdown = this.querySelector('.dropdown-menu');
-        
+
         // Close other open dropdowns in mobile nav only
         document.querySelectorAll('.mobile .dropdown-menu').forEach(menu => {
             if (menu !== dropdown) menu.classList.remove('active');
@@ -88,22 +88,28 @@ function setTheme(theme, initialLoad = false) {
 
     // Apply the CSS variables
     if (isDark) {
-        root.style.setProperty('--text', '#f0f0f0');
+        // Dark Mode
+        root.style.setProperty('--text', '#E0E0E0');
+        root.style.setProperty('--black', '#E0E0E0');
         root.style.setProperty('--background', '#121212');
-        root.style.setProperty('--cyan', '#66AAC7');
-        root.style.setProperty('--cyan1', '#88cae8');
-        root.style.setProperty('--cyan1-filter', 'brightness(0) saturate(100%) invert(81%) sepia(9%) saturate(1232%) hue-rotate(169deg) brightness(99%) contrast(89%)');
-        root.style.setProperty('--light-cyan', '#1a3a47');
-        root.style.setProperty('--grey', '#1e1e1e');
-        root.style.setProperty('--white', '#1e1e1e');
-        root.style.setProperty('--second-background', '#2d2d2d');
-        root.style.setProperty('--button', 'linear-gradient(to top right, #2d2d2d, #1a3a47)');
-        root.style.setProperty('--button-hover', 'linear-gradient(to top right, #66AAC7, #88cae8)');
-        root.style.setProperty('--shadow', '0 4px 20px rgba(255, 255, 255, 0.05)');
-        root.style.setProperty('--shadow2', '0 2px 10px rgba(255, 255, 255, 0.1)');
+        root.style.setProperty('--cyan', '#4A8DA9');
+        root.style.setProperty('--cyan1', '#66AAC7');
+        root.style.setProperty('--cyan1-filter', 'brightness(0) saturate(100%) invert(76%) sepia(12%) saturate(1025%) hue-rotate(157deg) brightness(87%) contrast(85%)');
+        root.style.setProperty('--light-cyan', '#1E3A47');
+        root.style.setProperty('--grey', '#2A2A2A');
+        root.style.setProperty('--white', '#1E1E1E');
+        root.style.setProperty('--second-background', '#1A1A1A');
+        root.style.setProperty('--button', 'linear-gradient(to top right, #2A2A2A, #1E3A47)');
+        root.style.setProperty('--button-hover', 'linear-gradient(to top right, #4A8DA9, #29799b)');
+        root.style.setProperty('--shadow', '0 4px 20px rgba(0, 0, 0, 0.3)');
+        root.style.setProperty('--shadow2', '0 2px 10px rgba(0, 0, 0, 0.2)');
         root.style.setProperty('--border-color', '#333333');
+        root.style.setProperty('--background3', 'linear-gradient(to bottom, #1E3A47, #121212)');
+
     } else {
+        // Light Mode (original)
         root.style.setProperty('--text', '#333333');
+        root.style.setProperty('--black', '#141414');
         root.style.setProperty('--background', '#FBFCFF');
         root.style.setProperty('--cyan', '#66AAC7');
         root.style.setProperty('--cyan1', '#29799b');
@@ -111,15 +117,16 @@ function setTheme(theme, initialLoad = false) {
         root.style.setProperty('--light-cyan', '#C9E3EE');
         root.style.setProperty('--grey', '#f5f5f5');
         root.style.setProperty('--white', '#ffffff');
-        root.style.setProperty('--second-background', '#F2F2F2');
+        root.style.setProperty('--second-background', '#f7f7f7');
         root.style.setProperty('--button', 'linear-gradient(to top right, #F6F6F6, #E8F5FA)');
         root.style.setProperty('--button-hover', 'linear-gradient(to top right, #66AAC7, #4192B5)');
         root.style.setProperty('--shadow', '0 4px 20px rgba(0, 0, 0, 0.08)');
         root.style.setProperty('--shadow2', '0 2px 10px rgba(0, 0, 0, 0.1)');
         root.style.setProperty('--border-color', '#e4e4e4');
+        root.style.setProperty('--background3', 'linear-gradient(to bottom, #C9E3EE, #FFFFFF)');
+
     }
 
-    // Close any open dropdowns on selection (for mobile)
     if (!initialLoad) {
         document.querySelectorAll('.dropdown-menu.active').forEach(menu => {
             menu.classList.remove('active');

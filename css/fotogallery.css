@@ -2,7 +2,7 @@
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: var(--background);
+    /* background-color: var(--background); */
     display: block;
 }
 
@@ -14,7 +14,7 @@
 
 .fotogallery-title p {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--text);
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
@@ -31,7 +31,7 @@
     overflow: hidden;
     transition: var(--transition);
     cursor: pointer;
-    background: white;
+    background: var(--white);
 }
 
 .gallery-item:hover {

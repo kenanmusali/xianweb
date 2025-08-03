@@ -1,6 +1,6 @@
 .construction-section {
     background: var(--background);
-    padding: 48px 0 32px 0;
+    padding: 48px 0 62px 0;
     width: 100%;
 }
 
@@ -23,8 +23,8 @@
     gap: 25px;
     justify-content: center;
     align-items: center;
-    width: 1000px;
-    height: 500px;
+    max-width: 300px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -39,11 +39,12 @@
     justify-content: center;
     text-align: center;
     min-height: 160px;
-    border-bottom: 4px solid var(--blue);
+    border-bottom: 4px solid var(--cyan);
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
     height: 10px;
+    transform: perspective(1000px) rotateX(5deg);
     width: 300px;
 }
 
@@ -156,7 +157,8 @@
     .construction-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
-        width: auto;
+        max-width: 700px;
+        width: 100%;
         height: auto;
         padding: 0 10px;
     }
@@ -173,8 +175,8 @@
     .construction-grid {
         grid-template-columns: repeat(2, 40%);
         gap: 30px;
-        width: auto;
-        height: auto;
+  max-width: 700px;
+        width: 100%;
         padding: 0 10px;
     }
     .construction-card {

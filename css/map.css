@@ -1,18 +1,27 @@
 .map-img {
     width: 100%;
-    max-width: 1350px;
     height: auto;
     display: block;
     margin: 0 auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .map-border {
-    box-shadow: 0 1px 1px var(--blue);
-    padding: 7px;
-    border-radius: 5px;
+    box-shadow: 0 1px 1px var(--cyan);
+    padding: 0.5rem;
+    border-radius: 12px;
     display: inline-block;
-    max-width: 100%;
+    width: 100%;
     background: var(--button);
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+        border-bottom: 4px solid var(--cyan);
+    -o-border-radius: 12px;
 }
 
 .map {

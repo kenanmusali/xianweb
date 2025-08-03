@@ -1,6 +1,6 @@
 .dryport-section {
     background: var(--second-background);
-    /* padding: 48px 0 32px 0; */
+    padding: 48px 0 62px 0 !important;
     padding-top:5rem ;
     padding-bottom: 2rem;
     width: 100%;

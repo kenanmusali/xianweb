@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
-    width: 60%;
+    width: 100%;
     height: 0%;
 }
 
@@ -46,7 +46,7 @@
     /* gap: 30px; */
     /* align-items: flex-start; */
     min-height: 160px;
-    border-bottom: 4px solid var(--blue);
+    border-bottom: 4px solid var(--cyan);
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -90,7 +90,16 @@
     width: 15rem;
     transition: color 0.3s ease;
 }
+.value-card:hover .value-name,.value-card:hover .value-desc {
+    color: #ffffff;
+    transform: translateY(-45px);
+    -webkit-transform: translateY(-45px);
+    -moz-transform: translateY(-45px);
+    -ms-transform: translateY(-45px);
+    -o-transform: translateY(-45px);
+    width: 70%;
 
+}
 .value-card:hover .value-desc {
     color: #ffffff;
 }
@@ -115,6 +124,10 @@
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
 }
 
 /* Show the large background icon on hover with slide-up animation */
@@ -168,7 +181,7 @@
     }
     
     .value-grp1 {
-        width: 80%;
+        width: 100%;
         gap: 25px;
     }
     
@@ -223,8 +236,8 @@
     .values-section {
         padding-top: 3rem;
         padding-bottom: 3rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     
     .values-title {
