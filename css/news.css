@@ -267,6 +267,10 @@
         padding: 20px 0;
         height: 74px;
     }
+
+    .news-pagination button {
+        color: var(--text);
+    }
     
     
     .news-pagination button {

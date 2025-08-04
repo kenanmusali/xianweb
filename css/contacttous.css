@@ -7,7 +7,7 @@
 
 .contact-form {
     padding: 50px 40px;
-    background-color: white;
+    background-color: none;
     display: flex;
     flex-direction: column;
     width: 600px;
@@ -21,7 +21,7 @@ textarea {
 .contact-title {
     font-size: 28px;
     font-weight: 700;
-    color: var(--blue);
+    color: var(--cyan);
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
@@ -78,8 +78,8 @@ form {
 .full-input:focus,
 .message-input:focus {
     outline: none;
-    /* border: 2px solid var(--blue);
-    box-shadow: 0 0 0 3px rgba(var(--blue-rgb, 59, 130, 246), 0.1); */
+    /* border: 2px solid var(--cyan);
+    box-shadow: 0 0 0 3px rgba(var(--cyan-rgb, 59, 130, 246), 0.1); */
     background: var(--button);
     transform: translateY(-1px);
 }
@@ -131,7 +131,7 @@ form {
 
 /* Enhanced Checkbox Focus */
 .checkbox-row input[type="checkbox"]:focus {
-    outline: 2px solid var(--blue);
+    outline: 2px solid var(--cyan);
     outline-offset: 2px;
 }
 
@@ -147,7 +147,7 @@ form {
 }
 
 .checkbox-row label:hover {
-    color: var(--blue);
+    color: var(--cyan);
 }
 
 .send-btn {
@@ -188,15 +188,25 @@ form {
 }
 
 .map-section {
-    border-bottom: 4px solid var(--blue);
+    border-bottom: 4px solid var(--cyan);
     height: auto;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 12px;
+    padding: 0.5rem;
     background: var(--button);
 }
 
+input,
+.message-input {
+  background-color: var(--white);
+  color: var(--black);         
+  caret-color: var(--black);  
+  border-radius: 12px;
+  border-bottom: 4px solid var(--cyan) !important;
+}
+
 .map-container {
-    padding: 15px;
+    border-radius: 8px;
+    padding: 0.2rem;
 }
 
 .map-iframe {
@@ -209,7 +219,7 @@ form {
 
 /* Enhanced iframe focus */
 .map-iframe:focus {
-    outline: 2px solid var(--blue);
+    outline: 2px solid var(--cyan);
     outline-offset: 2px;
 }
 
@@ -259,15 +269,15 @@ form {
 }
 
 .contact-item a:hover {
-    color: var(--blue);
-    background-color: rgba(var(--blue-rgb, 59, 130, 246), 0.1);
+    color: var(--cyan);
+    background-color: rgba(var(--cyan-rgb, 59, 130, 246), 0.1);
 }
 
 /* Enhanced link focus */
 .contact-item a:focus {
-    outline: 2px solid var(--blue);
+    outline: 2px solid var(--cyan);
     outline-offset: 1px;
-    color: var(--blue);
+    color: var(--cyan);
 }
 
 .contact-icon {
@@ -302,12 +312,12 @@ form {
     justify-content: center;
     text-decoration: none;
     transition: var(--transition);
-    background-color: var(--blue);
+    background-color: var(--cyan);
 }
 
 /* Enhanced social icon focus */
 .social-icon:focus {
-    outline: 2px solid var(--blue);
+    outline: 2px solid var(--cyan);
     outline-offset: 3px;
     transform: translateY(-2px);
     box-shadow: var(--shadow);

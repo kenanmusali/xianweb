@@ -15,10 +15,8 @@ function toggleMenu() {
     }
 }
 
-// Dropdown toggle for mobile - updated to only target mobile version
 document.querySelectorAll('.mobile .nav-about, .mobile .nav-media, .mobile .themes, .mobile .language').forEach(item => {
     item.addEventListener('click', function (e) {
-        // Prevent link click from instantly closing
         if (e.target.tagName === 'A' || e.target.tagName === 'IMG') {
             e.preventDefault();
         }
@@ -26,22 +24,18 @@ document.querySelectorAll('.mobile .nav-about, .mobile .nav-media, .mobile .them
 
         const dropdown = this.querySelector('.dropdown-menu');
 
-        // Close other open dropdowns in mobile nav only
         document.querySelectorAll('.mobile .dropdown-menu').forEach(menu => {
             if (menu !== dropdown) menu.classList.remove('active');
         });
 
-        // Toggle the clicked one
         dropdown.classList.toggle('active');
     });
 });
 document.addEventListener('DOMContentLoaded', () => {
-    // Select ALL theme dropdowns (desktop + mobile)
     const themeDropdowns = document.querySelectorAll(
         '.themes .menu-items, .mobile .nav-about .menu-items'
     );
 
-    // Collect all theme option <a> elements
     const themeDropdownItems = [];
     themeDropdowns.forEach(dropdown => {
         dropdown.querySelectorAll('a').forEach(item => {
@@ -51,10 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentTheme = localStorage.getItem('theme') || 'auto';
 
-    // Set initial theme
     setTheme(currentTheme, true);
 
-    // Add click handler for each theme link
     themeDropdownItems.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
@@ -63,12 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
             currentTheme = theme;
             localStorage.setItem('theme', theme);
 
-            // Set the theme and close dropdown
             setTheme(theme);
         });
     });
 
-    // Watch for system dark mode changes
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     darkModeMediaQuery.addEventListener('change', () => {
         if (currentTheme === 'auto') setTheme('auto');
@@ -78,15 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function setTheme(theme, initialLoad = false) {
     const root = document.documentElement;
 
-    // Determine if dark
     const isDark = theme === 'auto'
         ? window.matchMedia('(prefers-color-scheme: dark)').matches
         : theme === 'dark';
 
-    // Update the active indicator on all menus
     updateActiveThemeIndicator(theme);
 
-    // Apply the CSS variables
     if (isDark) {
         // Dark Mode
         root.style.setProperty('--text', '#E0E0E0');
@@ -105,6 +92,8 @@ function setTheme(theme, initialLoad = false) {
         root.style.setProperty('--shadow2', '0 2px 10px rgba(0, 0, 0, 0.2)');
         root.style.setProperty('--border-color', '#333333');
         root.style.setProperty('--background3', 'linear-gradient(to bottom, #1E3A47, #121212)');
+         root.style.setProperty('--black-filter', ' brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(335deg) brightness(103%) contrast(101%)');
+
 
     } else {
         // Light Mode (original)
@@ -124,6 +113,7 @@ function setTheme(theme, initialLoad = false) {
         root.style.setProperty('--shadow2', '0 2px 10px rgba(0, 0, 0, 0.1)');
         root.style.setProperty('--border-color', '#e4e4e4');
         root.style.setProperty('--background3', 'linear-gradient(to bottom, #C9E3EE, #FFFFFF)');
+        root.style.setProperty('--black-filter', ' brightness(0) saturate(100%)');
 
     }
 
@@ -135,7 +125,6 @@ function setTheme(theme, initialLoad = false) {
 }
 
 function updateActiveThemeIndicator(theme) {
-    // Works for both desktop and mobile
     document.querySelectorAll('.themes .menu-items a, .mobile .nav-about .menu-items a')
         .forEach(item => {
             if (item.textContent.trim() === theme) {

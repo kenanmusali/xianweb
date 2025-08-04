@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tranzit News Detail</title>
+  <link rel="icon" href="./img/favicon.png" type="image/png" />
 
-  <!-- your root variables -->
+
+
   <link rel="stylesheet" href="/css/root.css" />
 
-  <!-- FontAwesome for social icons -->
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -213,17 +215,12 @@
     <p class="date" id="date"></p>
 
     <!-- Share buttons -->
-    <div class="share">
-      <a class="share-fb"  target="_blank" title="Share on Facebook">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a class="share-tw"  target="_blank" title="Share on Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a class="share-ln"  target="_blank" title="Share on LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </div>
+<div class="footer-social">
+              <a href="#"><span class="footer-social-circle"><img src="/svg/facebook.svg" alt="Facebook"></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/instagram.svg" alt="Instagram"></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/linkedin.svg" alt="LinkedIn"></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/x.svg" alt="X"></span></a>
+            </div>
 
     <!-- Article text -->
     <div id="content"></div>
@@ -237,76 +234,85 @@
     <img src="" alt="Full size"/>
   </div>
 
-  <script>
-    // 1. Sample data per card
-    const NEWS = {
-      1: {
-        title: "Tranzit Embraces AI for Optimized Route Planning",
-        date:  "September 15, 2025",
-        content: `
-          <p>Our new AI engine re-calculates freight routes in real-time, dynamically adjusting for traffic, weather, and load capacity.</p>
-          <p>By cutting idle miles by 18%, we’re saving our customers millions in fuel and labor costs each quarter.</p>
-        `,
-        images: [
-          "/img/1xian.png",
-          "/img/1xian-detail1.png",
-          "/img/1xian-detail2.png",
-          "/img/1xian-detail2.png",
-          "/img/1xian-detail2.png",
-          "/img/1xian-detail2.png",
-        ]
-      },
-      2: { /* … your other items … */ },
-      3: { /* … */ },
-      4: { /* … */ }
-    };
+    <div class="footer">
+    <div class="footer-bg">
+      <div class="footer-blur footer-blur-blue"></div>
+      <div class="footer-blur footer-blur-red"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-col logo-col">
+        <img src="/img/logo.png" alt="XI'AN ASHBERON LOGISTICS" class="footer-logo" />
+      </div>
 
-    // 2. Grab ?id= from URL, fallback to 1
-    const params  = new URLSearchParams(location.search);
-    const id      = params.get("id") || "1";
-    const article = NEWS[id] || NEWS["1"];
+      <div class="footer-main-sections">
+        <!-- First section: About, Media, Others -->
+        <div class="footer-section footer-section-left">
+          <div class="footer-col">
+            <h4>Haqqımızda</h4>
+            <a href="#">Şirkət haqqında</a>
+            <a href="#">Dəyərlərimiz</a>
+            <a href="#">Strateji partnyorlar</a>
+            <a href="#">Daşıma marşurutları</a>
+          </div>
+          <div class="footer-col">
+            <h4>Media</h4>
+            <a href="#">Xəbərlər</a>
+            <a href="#">Fotoqaleriya</a>
+            <a href="#">Videoqaleriya</a>
+          </div>
+          <div class="footer-col">
+            <h4>Digər</h4>
+            <a href="#">Xidmətlər</a>
 
-    // 3. Inject title, date, content
-    document.getElementById("title").innerText   = article.title;
-    document.getElementById("date").innerText    = article.date;
-    document.getElementById("content").innerHTML = article.content;
+            <a href="#">Əlaqə</a>
+          </div>
+        </div>
 
-    // 4. Create & insert cover image
-    const mainImg = article.images.shift();
-    const cover   = document.createElement("div");
-    cover.className = "cover";
-    cover.innerHTML = `<img src="${mainImg}" alt="Cover image"/>`;
-    document.querySelector(".article").insertBefore(
-      cover,
-      document.getElementById("title").nextSibling
-    );
+        <!-- Second section: Contact, Follow us -->
+        <div class="footer-section footer-section-right">
+          <div class="footer-col contact-col">
+            <h4>Contact</h4>
+            <a href="mailto:info@xianasberon.com">
+              <img src="/svg/mail.svg" alt="mail" class="footer-icon" />
+              info@xianasberon.com
+            </a>
+            <a href="#">
+              <img src="/svg/distance.svg" alt="location" class="footer-icon" />
+              Room 401, No. 3399, Gangze road,<br />
+              Xi'an Chanba International Port,<br />
+              Xi'an, China
+            </a>
+            <a href="tel:+8615694823698">
+              <img src="/svg/call.svg" alt="phone" class="footer-icon" />
+              +86 15694823698
+            </a>
+            <a href="tel:+8613072936683" style="margin-left: 30px">
+              +86 13072936683
+            </a>
+          </div>
+          <div class="footer-col social-col">
+            <h4>Follow us</h4>
+            <div class="footer-social">
+              <a href="#"><span class="footer-social-circle"><img src="/svg/facebook.svg" alt="Facebook" /></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/instagram.svg" alt="Instagram" /></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/linkedin.svg" alt="LinkedIn" /></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/x.svg" alt="X" /></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    // 5. Build gallery of remaining images
-    const gallery = document.getElementById("gallery");
-    article.images.forEach(src => {
-      const img = document.createElement("img");
-      img.src = src;
-      gallery.appendChild(img);
-    });
+    <div class="footer-bottom">
+      <div class="footer-links">
+        Legal | Terms of Use | Privacy Policy | Supply Chain Transparency
+      </div>
+      <div class="footer-copyright">© XI' AN 2025, All right reserved</div>
+    </div>
+  </div>
 
-    // 6. Wire up share URLs
-    const shareUrl = encodeURIComponent(window.location.href);
-    document.querySelector(".share-fb").href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
-    document.querySelector(".share-tw").href = `https://twitter.com/intent/tweet?url=${shareUrl}`;
-    document.querySelector(".share-ln").href = `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}`;
-
-    // 7. Lightbox behavior
-    const lightbox    = document.getElementById("lightbox");
-    const lightboxImg = lightbox.querySelector("img");
-    gallery.addEventListener("click", e => {
-      if (e.target.tagName!=="IMG") return;
-      lightboxImg.src = e.target.src;
-      lightbox.classList.add("show");
-    });
-    lightbox.addEventListener("click", () => {
-      lightbox.classList.remove("show");
-    });
   </script>
     <script src="/js/navbar.js"></script>
+    <script src="/js/read.js"></script>
 </body>
 </html>

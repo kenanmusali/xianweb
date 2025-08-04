@@ -54,6 +54,11 @@
     height: 40px;
 }
 
+.themes img,
+.language img{
+filter: var(--black-filter);
+}
+
 .themes,
 .language,
 .login-register {
@@ -159,6 +164,11 @@
     position: relative;
 }
 
+.nav-about img,
+.nav-media img {
+    filter: var(--black-filter);
+}
+
 
 /* Dropdown Menu Styles */
 
@@ -243,7 +253,7 @@
     align-items: center;
     justify-content: center;
     background: var(--blue);
-    color: white;
+    color: var(--white);
     border: none;
     padding: 0.625rem 1.25rem;
     border-radius: 0.5rem;
@@ -278,7 +288,10 @@
     transform: rotate(-90deg) translateX(3px);
 }
 
-/* Mobile Navigation Toggle */
+
+.hamburger-menu img{
+    filter: var(--black-filter);
+}
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -293,11 +306,6 @@
 .hamburger-menu span {
     display: none;
 }
-
-
-
-
-/* Fix dropdown behavior to stay open when hovering menu */
 .nav-about,
 .nav-media,
 .themes,

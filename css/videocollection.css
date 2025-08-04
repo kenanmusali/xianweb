@@ -3,7 +3,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    background: var(--background);
 }
 
 /* Main Video Section */
@@ -103,7 +102,7 @@
 }
 
 .video-thumbnail.active {
-    border-color: var(--blue);
+    border-color: var(--cyan);
     box-shadow: 0 8px 25px rgba(102, 170, 199, 0.3);
 }
 
@@ -285,4 +284,89 @@
     .thumbnail-info p {
         font-size: 13px;
     }
+}
+
+/* --------------------------------------------- */
+
+.video-controls {
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow2);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.control-btn {
+  background: var(--button);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.mainVideo video {
+    height: 100%;
+}
+
+.control-btn:hover {
+  background: var(--button-hover);
+  color: var(--white);
+}
+
+#volumeSlider {
+  width: 100px;
+  cursor: pointer;
+  accent-color: var(--cyan1);
+}
+
+.progress-time-group {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.progress-container {
+  flex: 1;
+  height: 6px;
+  background: var(--grey);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--cyan1);
+  transition: width 0.3s ease;
+}
+
+.time-display {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--black);
+  white-space: nowrap;
+}
+
+.voulme-slider {
+    display: none;
+}
+
+#mainVideo {
+    width: 100%;
+}
+
+.video-source {
+    width: 800px;
+}
+
+.video-controls {
+    display: none;
 }

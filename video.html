@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Video</title>
+  <link rel="icon" href="./img/favicon.png" type="image/png" />
+
   <link rel="stylesheet" href="/css/root.css" />
 </head>
 
@@ -196,92 +198,104 @@
     </div>
   </div>
 
-  <div class="videocollection">
-    <div class="video-collection-container">
-      <!-- Main Featured Video -->
-      <div class="main-video-section">
-        <div class="main-video-wrapper">
-          <iframe id="mainVideo" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Featured Video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
+<div class="videocollection">
+  <div class="video-collection-container">
+    <div class="main-video-section">
+      <div class="main-video-wrapper">
+        <video id="mainVideo" controls autoplay>
+          <source class="video-source" src="./video/video1.mp4" type="video/mp4">
+          
+        </video>
       </div>
+<div class="video-controls">
+  <button id="playPauseBtn" class="control-btn">⏸</button>
+  <input class="voulme-slider" type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
 
-      <!-- Video Thumbnails Carousel -->
-      <div class="video-carousel">
-        <button class="nav-btn prev-btn" id="prevBtn">
-          <img src="svg/left.svg" alt="Previous" />
-        </button>
+  <div class="progress-time-group">
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <div class="time-display">
+      <span id="currentTime">00:00</span>
+      <span class="time-separator">/</span>
+      <span id="duration">00:00</span>
+    </div>
+  </div>
+</div>
 
-        <div class="thumbnails-container">
-          <div class="thumbnails-wrapper" id="thumbnailsWrapper">
-            <!-- Video Thumbnail 1 -->
-            <div class="video-thumbnail active" data-video-id="dQw4w9WgXcQ">
-              <div class="thumbnail-image">
-                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg" alt="Video Thumbnail" />
-                <div class="play-overlay">
-                  <div class="play-button">▶</div>
-                </div>
+    </div>
+
+    <!-- Video Thumbnails Carousel -->
+    <div class="video-carousel">
+      <button class="nav-btn prev-btn" id="prevBtn">
+        <img src="svg/left.svg" alt="Previous" />
+      </button>
+
+      <div class="thumbnails-container">
+        <div class="thumbnails-wrapper" id="thumbnailsWrapper">
+          <!-- Video Thumbnail 1 -->
+          <div class="video-thumbnail active" data-video-src="./video/video1.mp4">
+            <div class="thumbnail-image">
+              <img src="./img/1xian.png" alt="Video 1 Thumbnail" />
+              <div class="play-overlay">
+                <div class="play-button">▶</div>
               </div>
             </div>
+          </div>
 
-            <!-- Video Thumbnail 2 -->
-            <div class="video-thumbnail" data-video-id="jNQXAC9IVRw">
-              <div class="thumbnail-image">
-                <img src="https://img.youtube.com/vi/jNQXAC9IVRw/mqdefault.jpg" alt="Video Thumbnail" />
-                <div class="play-overlay">
-                  <div class="play-button">▶</div>
-                </div>
+          <!-- Video Thumbnail 2 -->
+          <div class="video-thumbnail" data-video-src="./video/video2.mp4">
+            <div class="thumbnail-image">
+              <img src="./img/2xian.png" alt="Video 2 Thumbnail" />
+              <div class="play-overlay">
+                <div class="play-button">▶</div>
               </div>
             </div>
+          </div>
 
-            <!-- Video Thumbnail 3 -->
-            <div class="video-thumbnail" data-video-id="M7lc1UVf-VE">
-              <div class="thumbnail-image">
-                <img src="https://img.youtube.com/vi/M7lc1UVf-VE/mqdefault.jpg" alt="Video Thumbnail" />
-                <div class="play-overlay">
-                  <div class="play-button">▶</div>
-                </div>
+          <!-- Video Thumbnail 3 -->
+          <div class="video-thumbnail" data-video-src="./video/video3.mp4">
+            <div class="thumbnail-image">
+              <img src="./img/3xian.png" alt="Video 3 Thumbnail" />
+              <div class="play-overlay">
+                <div class="play-button">▶</div>
               </div>
             </div>
+          </div>
 
-            <!-- Video Thumbnail 4 -->
-            <div class="video-thumbnail" data-video-id="9bZkp7q19f0">
-              <div class="thumbnail-image">
-                <img src="https://img.youtube.com/vi/9bZkp7q19f0/mqdefault.jpg" alt="Video Thumbnail" />
-                <div class="play-overlay">
-                  <div class="play-button">▶</div>
-                </div>
+          <!-- Video Thumbnail 4 -->
+          <div class="video-thumbnail" data-video-src="./video/video4.mp4">
+            <div class="thumbnail-image">
+              <img src="./img/4xian.png" alt="Video 4 Thumbnail" />
+              <div class="play-overlay">
+                <div class="play-button">▶</div>
               </div>
             </div>
+          </div>
 
-            <!-- Video Thumbnail 5 -->
-            <div class="video-thumbnail" data-video-id="kJQP7kiw5Fk">
-              <div class="thumbnail-image">
-                <img src="https://img.youtube.com/vi/kJQP7kiw5Fk/mqdefault.jpg" alt="Video Thumbnail" />
-                <div class="play-overlay">
-                  <div class="play-button">▶</div>
-                </div>
-              </div>
-            </div>
-            <div class="video-thumbnail" data-video-id="9bZkp7q19f0">
-              <div class="thumbnail-image">
-                <img src="https://img.youtube.com/vi/9bZkp7q19f0/mqdefault.jpg" alt="Video Thumbnail" />
-                <div class="play-overlay">
-                  <div class="play-button">▶</div>
-                </div>
+          <!-- Video Thumbnail 5 -->
+          <div class="video-thumbnail" data-video-src="./video/video5.mp4">
+            <div class="thumbnail-image">
+              <img src="./img/1xian.png" alt="Video 5 Thumbnail" />
+              <div class="play-overlay">
+                <div class="play-button">▶</div>
               </div>
             </div>
           </div>
         </div>
-
-        <button class="nav-btn next-btn" id="nextBtn">
-          <img src="svg/right.svg" alt="Next" />
-        </button>
       </div>
+
+      <button class="nav-btn next-btn" id="nextBtn">
+        <img src="svg/right.svg" alt="Next" />
+      </button>
     </div>
   </div>
+</div>
+
+
+ 
+
+
   <footer class="footer">
     <div class="footer-bg">
       <div class="footer-blur footer-blur-blue"></div>

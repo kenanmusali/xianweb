@@ -1,55 +1,150 @@
-// Video Collection JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     const thumbnailsWrapper = document.getElementById('thumbnailsWrapper');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     const mainVideo = document.getElementById('mainVideo');
-    const videoTitle = document.getElementById('videoTitle');
-    const videoDescription = document.getElementById('videoDescription');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const volumeSlider = document.getElementById('volumeSlider');
+    const currentTimeDisplay = document.getElementById('currentTime');
+    const durationDisplay = document.getElementById('duration');
+    const progressBar = document.getElementById('progressBar');
+    const progressContainer = document.querySelector('.progress-container');
     
-    let currentIndex = 0;
-    let thumbnailWidth = 300; // 280px + 20px gap
+    let thumbnailWidth = 300; 
     let visibleThumbnails = 4;
+    let currentIndex = 0;
     
-    // Calculate visible thumbnails based on screen size
+    let isDraggingProgress = false;
+
+    function togglePlayPause() {
+        if (mainVideo.paused) {
+            mainVideo.play();
+            playPauseBtn.textContent = '⏸';
+        } else {
+            mainVideo.pause();
+            playPauseBtn.textContent = '▶';
+        }
+    }
+    
+    function updateVolume() {
+        mainVideo.volume = volumeSlider.value;
+    }
+    
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        seconds = Math.floor(seconds % 60);
+        return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+    
+    function updateTimeDisplay() {
+        currentTimeDisplay.textContent = formatTime(mainVideo.currentTime);
+        durationDisplay.textContent = formatTime(mainVideo.duration);
+    }
+    
+    function updateProgressBar() {
+        if (!isDraggingProgress && !isNaN(mainVideo.duration)) {
+            const progress = (mainVideo.currentTime / mainVideo.duration) * 100;
+            progressBar.style.width = progress + '%';
+        }
+    }
+    
+    function seekVideo(e) {
+        const rect = progressContainer.getBoundingClientRect();
+        const pos = (e.clientX - rect.left) / rect.width;
+        mainVideo.currentTime = pos * mainVideo.duration;
+    }
+
+    // Initialize video controls
+    playPauseBtn.addEventListener('click', togglePlayPause);
+    volumeSlider.addEventListener('input', updateVolume);
+    
+    mainVideo.addEventListener('timeupdate', function() {
+        updateTimeDisplay();
+        updateProgressBar();
+    });
+    
+    mainVideo.addEventListener('loadedmetadata', function() {
+        updateTimeDisplay();
+    });
+    
+    mainVideo.addEventListener('play', function() {
+        playPauseBtn.textContent = '⏸';
+    });
+    
+    mainVideo.addEventListener('pause', function() {
+        playPauseBtn.textContent = '▶';
+    });
+
+    progressContainer.addEventListener('click', seekVideo);
+    
+    progressContainer.addEventListener('mousedown', function() {
+        isDraggingProgress = true;
+    });
+    
+    document.addEventListener('mousemove', function(e) {
+        if (isDraggingProgress) {
+            seekVideo(e);
+        }
+    });
+    
+    document.addEventListener('mouseup', function() {
+        isDraggingProgress = false;
+    });
+    
+    progressContainer.addEventListener('touchstart', function() {
+        isDraggingProgress = true;
+    });
+    
+    progressContainer.addEventListener('touchmove', function(e) {
+        if (isDraggingProgress) {
+            seekVideo(e.touches[0]);
+        }
+    });
+    
+    progressContainer.addEventListener('touchend', function() {
+        isDraggingProgress = false;
+    });
+    
+    mainVideo.muted = true;
+    mainVideo.play().then(() => {
+        mainVideo.muted = false;
+    }).catch(error => {
+        console.log('Autoplay prevented:', error);
+    });
+    
     function calculateVisibleThumbnails() {
-        const containerWidth = document.querySelector('.thumbnails-container').offsetWidth;
         const screenWidth = window.innerWidth;
         
         if (screenWidth <= 480) {
-            thumbnailWidth = 195; // 180px + 15px gap
-            visibleThumbnails = Math.floor(containerWidth / thumbnailWidth);
+            thumbnailWidth = 200;
         } else if (screenWidth <= 640) {
-            thumbnailWidth = 215; // 200px + 15px gap
-            visibleThumbnails = Math.floor(containerWidth / thumbnailWidth);
+            thumbnailWidth = 220;
         } else if (screenWidth <= 768) {
-            thumbnailWidth = 235; // 220px + 15px gap
-            visibleThumbnails = Math.floor(containerWidth / thumbnailWidth);
+            thumbnailWidth = 240;
+        } else if (screenWidth <= 825) {
+            thumbnailWidth = 220;
         } else if (screenWidth <= 1024) {
-            thumbnailWidth = 270; // 250px + 20px gap
-            visibleThumbnails = Math.floor(containerWidth / thumbnailWidth);
+            thumbnailWidth = 250;
+        } else if (screenWidth <= 1134) {
+            thumbnailWidth = 270;
         } else {
-            thumbnailWidth = 300; // 280px + 20px gap
-            visibleThumbnails = Math.floor(containerWidth / thumbnailWidth);
+            thumbnailWidth = 300;
         }
         
-        // Ensure at least 1 thumbnail is visible
+        const containerWidth = document.querySelector('.thumbnails-container').offsetWidth;
+        visibleThumbnails = Math.floor(containerWidth / thumbnailWidth);
         visibleThumbnails = Math.max(1, visibleThumbnails);
     }
     
-    // Get all thumbnails
     const thumbnails = document.querySelectorAll('.video-thumbnail');
     const totalThumbnails = thumbnails.length;
     
-    // Update navigation buttons state
     function updateNavButtons() {
         const maxIndex = Math.max(0, totalThumbnails - visibleThumbnails);
-        
         prevBtn.disabled = currentIndex <= 0;
         nextBtn.disabled = currentIndex >= maxIndex;
     }
     
-    // Update carousel position
     function updateCarousel() {
         calculateVisibleThumbnails();
         const translateX = -(currentIndex * thumbnailWidth);
@@ -57,7 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateNavButtons();
     }
     
-    // Previous button click
     prevBtn.addEventListener('click', function() {
         if (currentIndex > 0) {
             currentIndex--;
@@ -65,7 +159,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Next button click
     nextBtn.addEventListener('click', function() {
         const maxIndex = Math.max(0, totalThumbnails - visibleThumbnails);
         if (currentIndex < maxIndex) {
@@ -74,36 +167,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Thumbnail click handlers
     thumbnails.forEach(function(thumbnail) {
         thumbnail.addEventListener('click', function() {
-            // Remove active class from all thumbnails
             thumbnails.forEach(t => t.classList.remove('active'));
-            
-            // Add active class to clicked thumbnail
             this.classList.add('active');
             
-            // Get video data
-            const videoId = this.getAttribute('data-video-id');
-            const title = this.getAttribute('data-title');
-            const description = this.getAttribute('data-description');
-            
-            // Update main video
-            mainVideo.src = `https://www.youtube.com/embed/${videoId}`;
-            videoTitle.textContent = title;
-            videoDescription.textContent = description;
-            
-            // Smooth scroll to main video
-            document.querySelector('.main-video-section').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const videoSrc = this.getAttribute('data-video-src');
+            mainVideo.src = videoSrc;
+            mainVideo.load();
+            mainVideo.play().catch(error => {
+                console.log('Play prevented:', error);
             });
+            
+            mainVideo.addEventListener('loadedmetadata', function() {
+                updateTimeDisplay();
+            }, { once: true });
         });
     });
     
-    // Handle window resize
     window.addEventListener('resize', function() {
-        // Reset current index if it exceeds new limits
         calculateVisibleThumbnails();
         const maxIndex = Math.max(0, totalThumbnails - visibleThumbnails);
         if (currentIndex > maxIndex) {
@@ -112,10 +194,8 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarousel();
     });
     
-    // Initialize
     updateCarousel();
     
-    // Touch/swipe support for mobile
     let startX = 0;
     let endX = 0;
     
@@ -125,30 +205,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     thumbnailsWrapper.addEventListener('touchend', function(e) {
         endX = e.changedTouches[0].clientX;
-        handleSwipe();
-    });
-    
-    function handleSwipe() {
         const swipeThreshold = 50;
         const diff = startX - endX;
         
         if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0) {
-                // Swipe left - next
-                nextBtn.click();
-            } else {
-                // Swipe right - previous
-                prevBtn.click();
-            }
-        }
-    }
-    
-    // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowLeft') {
-            prevBtn.click();
-        } else if (e.key === 'ArrowRight') {
-            nextBtn.click();
+            if (diff > 0) nextBtn.click();
+            else prevBtn.click();
         }
     });
 });
