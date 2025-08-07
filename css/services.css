@@ -110,27 +110,27 @@
 
 /* Individual service icons */
 .service-card:nth-child(1)::after {
-    mask-image: url('/svg/services1.svg');
-}
-
-.service-card:nth-child(2)::after {
-    mask-image: url('/svg/services2.svg');
-}
-
-.service-card:nth-child(3)::after {
-    mask-image: url('/svg/services3.svg');
-}
-
-.service-card:nth-child(4)::after {
     mask-image: url('/svg/services4.svg');
 }
 
+.service-card:nth-child(2)::after {
+    mask-image: url('/svg/services6.svg');
+}
+
+.service-card:nth-child(3)::after {
+    mask-image: url('/svg/build.svg');
+}
+
+.service-card:nth-child(4)::after {
+    mask-image: url('/svg/business_center.svg');
+}
+
 .service-card:nth-child(5)::after {
-    mask-image: url('/svg/services5.svg');
+    mask-image: url('/svg/services2.svg');
 }
 
 .service-card:nth-child(6)::after {
-    mask-image: url('/svg/services6.svg');
+    mask-image: url('/svg/services5.svg');
 }
 
 /* Responsive styles - matching FAQ/solution approach */

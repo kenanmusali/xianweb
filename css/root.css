@@ -10,8 +10,7 @@
 @import url('/css/patner.css');
 @import url('/css/construction.css');
 @import url('/css/dryport.css');
-@import url('/css/bignews.css');
-@import url('/css/bignewsimg.css');
+
 @import url('/css/fotogallery.css');
 @import url('/css/foto.css');
 @import url('/css/servicesimg.css');
@@ -49,3 +48,10 @@ html {
     padding: 0;
     background-color: var(--white);
 }
+/* h2 {
+    color: var(--cyan) !important;
+}
+
+.content h2 {
+    color: var(--cyan) !important;
+} */
