@@ -220,6 +220,10 @@
        gap: 12px;
   max-width: 350px;
         width: 100%;
+                display: flex
+;
+        flex-direction: column;
+        align-items: center;
    }
 
    .solution-card {
