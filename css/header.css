@@ -62,11 +62,19 @@
   font-size: 14px;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .cta-button1:hover {
   background: #4192B5;
   transform: translateX(5px);
+}
+
+.cta-button1 a {
+  color: white;
+}
+.cta-button1:hover a {
+  color: white;
 }
 
 .cta-button1 img {

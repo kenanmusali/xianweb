@@ -15,7 +15,7 @@
 
 .nav-space {
     height: 110px;
-        background: var(--background);
+    background: var(--background);
 
 }
 
@@ -55,8 +55,8 @@
 }
 
 .themes img,
-.language img{
-filter: var(--black-filter);
+.language img {
+    filter: var(--black-filter);
 }
 
 .themes,
@@ -68,7 +68,6 @@ filter: var(--black-filter);
     gap: 0.5rem;
     cursor: pointer;
     position: relative;
-    font-weight: 600;
 }
 
 .login-register {
@@ -78,7 +77,6 @@ filter: var(--black-filter);
 .themes p,
 .language p {
     margin: 0;
-    font-size: 12px;
     color: var(--text);
     white-space: nowrap;
 }
@@ -120,13 +118,25 @@ filter: var(--black-filter);
     color: var(--blue);
 }
 
+
+
 .navbar2 {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
     position: relative;
-    height: 70px;
+    height: 100px;
     padding-inline: 7rem;
+      width: 100%;
+}
+
+.nav .navbar2:first-of-type {
+  justify-content: center; 
+}
+
+.nav .navbar2:last-of-type {
+  justify-content: flex-end;
 }
 
 .navbar2 a {
@@ -157,14 +167,14 @@ filter: var(--black-filter);
             width: 100%;
         } */
 
-.nav-about,
+.nav-media,
 .nav-media {
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.nav-about img,
+.nav-media img,
 .nav-media img {
     filter: var(--black-filter);
 }
@@ -289,9 +299,10 @@ filter: var(--black-filter);
 }
 
 
-.hamburger-menu img{
+.hamburger-menu img {
     filter: var(--black-filter);
 }
+
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -306,7 +317,8 @@ filter: var(--black-filter);
 .hamburger-menu span {
     display: none;
 }
-.nav-about,
+
+.nav-media,
 .nav-media,
 .themes,
 .language {
@@ -382,7 +394,7 @@ filter: var(--black-filter);
 
 
 
-.nav-about:hover .dropdown-menu,
+.nav-media:hover .dropdown-menu,
 .nav-media:hover .dropdown-menu,
 .themes:hover .dropdown-menu,
 .language:hover .dropdown-menu,
@@ -414,8 +426,8 @@ filter: var(--black-filter);
     cursor: pointer;
 }
 
-.nav-about:hover img,
-.nav-about:hover img,
+.nav-media:hover img,
+.nav-media:hover img,
 .nav-media:hover img,
 .themes:hover img:last-child,
 .language:hover img:last-child {
@@ -426,13 +438,13 @@ filter: var(--black-filter);
 }
 
 .nav-media:hover a,
-.nav-about:hover a {
+.nav-media:hover a {
     cursor: pointer;
 
 }
 
 .nav-media:hover .item,
-.nav-about:hover .item {
+.nav-media:hover .item {
     color: var(--cyan);
     cursor: pointer;
 }
@@ -564,7 +576,7 @@ filter: var(--black-filter);
         padding: 0.5rem 0;
     }
 
-    .nav-about,
+    .nav-media,
     .nav-media {
         display: flex;
         flex-direction: column;
@@ -577,7 +589,7 @@ filter: var(--black-filter);
 
     }
 
-    .nav-about span,
+    .nav-media span,
     .nav-media span {
         display: flex;
         align-items: center;
@@ -594,7 +606,7 @@ filter: var(--black-filter);
     }
 
 
-    .nav-about .dropdown-menu,
+    .nav-media .dropdown-menu,
     .nav-media .dropdown-menu,
     .themes .dropdown-menu,
     .language .dropdown-menu,
