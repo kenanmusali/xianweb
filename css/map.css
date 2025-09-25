@@ -1,0 +1,87 @@
+.map-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.map-border {
+    box-shadow: 0 1px 1px var(--cyan);
+    padding: 0.5rem;
+    border-radius: 12px;
+    display: inline-block;
+    width: 100%;
+    background: var(--button);
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+        border-bottom: 4px solid var(--cyan);
+    -o-border-radius: 12px;
+}
+
+.gmb_embed_job_box_header>h3  {
+    color:red !important;
+}
+.map {
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+    width: 100%;
+}
+
+@media (max-width: 1134px) {
+   .map-img {
+       max-width: 90%;
+   }
+   
+   .map {
+       padding: 36px 12px;
+   }
+   
+   .map-border {
+       padding: 6px;
+   }
+}
+
+/* Tablet */
+@media (max-width: 1400px) {
+   .map-img {
+       max-width: 100%;
+   }
+   
+   .map {
+       padding: 40px 15px;
+   }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+   .map-img {
+       max-width: 100%;
+   }
+   
+   .map {
+       padding: 30px 10px;
+   }
+   
+   .map-border {
+       padding: 5px;
+   }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+   .map-img {
+       padding: 5px 5px;
+   }
+   
+   .map-border {
+       padding: 3px;
+       box-shadow: 0 1px 1px var(--blue);
+   }
+}

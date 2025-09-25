@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XI'AN</title>
+  <link rel="icon" href="./img/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="/css/root.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+  
+
+
+  <div class="navbar">
+    <div class="nav-space"></div>
+
+    <div class="nav desktop">
+      <div class="logo">
+        <a href="/">
+          <img src="/img/logo.png" alt="Logo" />
+        </a>
+      </div>
+
+      <div class="navbar2 ">
+        <a class="item nav-home" href="/">Ana menu</a>
+
+        <div class="nav-media">
+          <a class="item">Haqqımızda</a>
+          <img src="/svg/chevron.down.svg" alt="" />
+
+          <div class="dropdown-menu">
+
+            <div class="menu-items">
+              <a href="/about.html">Şirkət haqqında</a>
+              <a href="/value.html">Dəyərlərimiz</a>
+              <a href="/patner.html">Strateji partnyorlar</a>
+            </div>
+
+          </div>
+        </div>
+
+        <a href="/services.html" class="nav-services">Xidmətlər</a>
+
+        <div class="nav-media">
+          <a class="item">Media</a>
+          <img src="/svg/chevron.down.svg" />
+
+          <div class="dropdown-menu">
+            <div class="menu-items">
+              <a href="/news.html">Xəbərlər</a>
+              <a href="/fotogallary.html">Foto Qalereya</a>
+              <a href="/video.html">Video Qalereya</a>
+            </div>
+          </div>
+        </div>
+        <a href="/faq.html" class="nav-services">FAQ</a>
+
+      </div>
+
+      <div class="navbar2">
+        <div class="nav-list themes">
+          <p>Themes</p>
+          <img class="img1" src="/svg/chevron.down.svg" alt="" />
+          <div class="dropdown-menu">
+            <div class="menu-items">
+              <a>dark</a>
+              <a>light</a>
+              <a>auto</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="nav-media language">
+          <a class="item">Languages</a>
+          <img src="/svg/chevron.down.svg" />
+
+          <div class="dropdown-menu">
+            <div class="menu-items">
+              <a>AZ-Azərbaycan dili</a>
+              <a>UK-English</a>
+              <a>ZHO-中文</a>
+            </div>
+          </div>
+        </div>
+        <div class="cta-button1">
+          <a href="/contact.html">ƏLAQƏ</a>
+          <img src="/svg/arrow-right.svg" alt="arrow" cursorshover="true">
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="nav mobile">
+      <div class="logo">
+        <a href="/">
+          <img src="/img/logo.png" alt="Logo" />
+        </a>
+      </div>
+
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <img src="/svg/menu-svgrepo-com.svg" alt="Menu" class="menu-icon" />
+        <img src="/svg/close-svgrepo-com.svg" alt="Close" class="close-icon" />
+
+      </div>
+
+      <div class="nav-section">
+
+
+        <div class="navbar2">
+
+
+
+
+          <div class="nav-media">
+            <span>
+              <a class="item">Haqqımızda</a>
+              <img src="/svg/chevron.down.svg" alt="" />
+            </span>
+            <div class="dropdown-menu">
+
+              <div class="menu-items">
+                <a href="/about.html">Şirkət haqqında</a>
+                <a href="/value.html">Dəyərlərimiz</a>
+                <a href="/patner.html">Strateji partnyorlar</a>
+              </div>
+
+            </div>
+          </div>
+          <div class="nav-media">
+            <a class="item nav-home" href="/">Ana menu</a>
+          </div>
+          <div class="nav-media">
+            <a href="/services.html" class="nav-services">Xidmətlər</a>
+          </div>
+
+          <div class="nav-media">
+            <span>
+              <a class="item">Media</a>
+              <img src="/svg/chevron.down.svg" />
+            </span>
+            <div class="dropdown-menu">
+              <div class="menu-items">
+                <a href="/news.html">Xəbərlər</a>
+                <a href="/fotogallary.html">Foto Qalereya</a>
+                <a href="/video.html">Video Qalereya</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-media">
+            <span>
+              <a class="item">Themes</a>
+              <img src="/svg/chevron.down.svg" alt="" />
+            </span>
+            <div class="dropdown-menu">
+
+              <div class="menu-items">
+                <a>Dark</a>
+                <a>Light</a>
+                <a>Auto</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="nav-media">
+            <span>
+              <a class="item">Language</a>
+              <img src="/svg/chevron.down.svg" alt="" />
+            </span>
+            <div class="dropdown-menu">
+
+              <div class="menu-items">
+                <a href="#">AZ-Azərbaycan dili</a>
+                <a href="#">UK-English</a>
+                <a href="#">ZHO-中文</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="nav-media">
+            <span>
+              <div class="cta-button1">
+                <a href="/contact.html">ƏLAQƏ</a>
+                <img src="/svg/arrow-right.svg" alt="arrow" cursorshover="true">
+              </div>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="header">
+    <div class="header-container">
+      <div class="header-content">
+        <h1>LOGİSTİCS SERVİCES</h1>
+        <h2>Drive Visibility. Empower Productivity. Deliver Flawlessly.</h2>
+        <p>
+          Transportation and Logistics leaders are re-imagining how goods move
+          in a world where every mile matters.
+        </p>
+        <a href="#" class="cta-button1">
+          REQUEST A FREIGHT QUOTE NOW
+          <img src="/svg/arrow-right.svg" alt="arrow" />
+        </a>
+      </div>
+
+      <div class="image">
+        <div class="world-map-bg">
+          <img class="main-image" src="/svg/Country/world1.svg"  />
+
+          <img class="country-hover kz" src="/svg/Country/hover/kz-hover.svg" alt="World map background" />
+          <img class="country-hover ch" src="/svg/Country/hover/ch-hover.svg" alt="World map background" />
+          <img class="country-hover az" src="/svg/Country/hover/az-hover.svg" alt="World map background" />
+          <img class="country-hover tr" src="/svg/Country/hover/tr-hover.svg" alt="World map background" />
+          <img class="country-hover ua" src="/svg/Country/hover/ua-hover.svg" alt="World map background" />
+          <img class="country-hover ro" src="/svg/Country/hover/ro-hover.svg" alt="World map background" />
+          <img class="country-hover pl" src="/svg/Country/hover/pl-hover.svg" alt="World map background" />
+        </div>
+
+        <!-- <div class="header-image">
+          <img src="/img/img1.jpg" alt="Container ship at port" />
+        </div> -->
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="services">
+    <section class="services-section">
+      <h2 class="services-title">
+        <span class="highlight">Our Logistic Services</span>
+      </h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="/svg/flight_takeoff.svg" alt="Truckload" class="service-icon" />
+          <h3 class="service-name">International freight</h3>
+          <p class="service-desc">
+            Ensuring your goods are transported efficiently, securely and delivered on time
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="/svg/services6.svg" alt="LTL" class="service-icon" />
+          <h3 class="service-name">Door-to-door delivery</h3>
+          <p class="service-desc">
+            Complete shipment service from the sender’s location directly to the recipient’s doorstep
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="/svg/deployed_code_account.svg" alt="Intermodal" class="service-icon" />
+          <h3 class="service-name">Customs services</h3>
+          <p class="service-desc">
+            Handling all necessary paperwork and procedures to ensure smooth import and export operations
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="/svg/box_add.svg" alt="Ocean" class="service-icon" />
+          <h3 class="service-name">Container purchasing, repair and cleaning</h3>
+          <p class="service-desc">
+            Careful and professional handling of cargo during loading onto and unloading from transport vehicles
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="/svg/services2.svg" alt="Warehouse" class="service-icon" />
+          <h3 class="service-name">Loading and unloading operations</h3>
+          <p class="service-desc">
+            Providing quality containers for sale, maintenance services, and thorough cleaning to meet standards
+          </p>
+        </div>
+        <div class="service-card">
+          <img src="/svg/services5.svg" alt="Supply Chain" class="service-icon" />
+          <h3 class="service-name">Warehousing</h3>
+          <p class="service-desc">
+            Safe and organized storage solutions with effective inventory management for your goods
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <div class="news">
+    <div class="news-section">
+      <div class="news-header">
+        <span class="highlight">Tranzit News and Insights</span>
+      </div>
+      <div class="view-all-div">
+        <a href="./news.html" class="view-all">View all</a>
+      </div>
+      <div class="news-carousel">
+
+        <div class="news-cards" id="news-cards">
+
+          <div class="news-card" data-id="1">
+            <img src="/img/1xian.png" class="news-img" />
+            <div class="news-content">
+              <p class="news-date">September 15, 2025</p>
+              <a href="news.html" class="news-title">Tranzit Embraces AI for Optimized Routes planning</a>
+              <p class="news-desc">
+                Full-capacity freight solutions for direct, efficient
+                long-haul transportation.
+              </p>
+              <a href="read.html?id=1" class="news-btn">READ MORE ABOUT NEWS</a>
+            </div>
+          </div>
+
+          <div class="news-card" data-id="2">
+            <img src="/img/2xian.png" class="news-img" />
+            <div class="news-content">
+              <p class="news-date">September 15, 2025</p>
+              <a href="news.html" class="news-title">Tranzit Embraces AI for Optimized Routes planning</a>
+              <p class="news-desc">
+                Full-capacity freight solutions for direct, efficient
+                long-haul transportation.
+              </p>
+              <a href="read.html?id=2" class="news-btn">READ MORE ABOUT NEWS</a>
+            </div>
+          </div>
+
+          <div class="news-card" data-id="3">
+            <img src="/img/3xian.png" class="news-img" />
+            <div class="news-content">
+              <p class="news-date">September 15, 2025</p>
+              <a href="news.html" class="news-title">Tranzit Embraces AI for Optimized Routes planning</a>
+              <p class="news-desc">
+                Full-capacity freight solutions for direct, efficient
+                long-haul transportation.
+              </p>
+              <a href="read.html?id=3" class="news-btn">READ MORE ABOUT NEWS</a>
+            </div>
+          </div>
+
+          <div class="news-card" data-id="4">
+            <img src="/img/4xian.png" alt="News 3" class="news-img" />
+            <div class="news-content">
+              <p class="news-date">September 15, 2025</p>
+              <a href="news.html" class="news-title">Tranzit Embraces AI for Optimized Routes planning</a>
+              <p class="news-desc">
+                Full-capacity freight solutions for direct, efficient
+                long-haul transportation.
+              </p>
+              <a href="read.html?id=4" class="news-btn">READ MORE ABOUT NEWS</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- <div class="faq">
+    <section class="faq-section">
+      <div class="faq-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Find answers to common questions about our transportation and
+          logistics solutions. If you need more help, please contact our
+          support team.
+        </p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <h3>What services does XI’ AN Transportation offer?</h3>
+            <img src="/svg/down-faq.svg" alt="Expand" class="faq-arrow" />
+          </button>
+          <div class="faq-answer">
+            We offer truckload, LTL, intermodal, ocean, warehouse, and supply
+            chain solutions for businesses of all sizes.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <h3>How can I track my shipment?</h3>
+            <img src="/svg/down-faq.svg" alt="Expand" class="faq-arrow" />
+          </button>
+          <div class="faq-answer">
+            You can track your shipment in real-time using our online booking
+            and tracking platform.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <h3>Do you provide international logistics?</h3>
+            <img src="/svg/down-faq.svg" alt="Expand" class="faq-arrow" />
+          </button>
+          <div class="faq-answer">
+            Yes, we provide reliable international freight movement with
+            end-to-end visibility and customs support.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <h3>How do I contact customer support?</h3>
+            <img src="/svg/down-faq.svg" alt="Expand" class="faq-arrow" />
+          </button>
+          <div class="faq-answer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> -->
+
+
+
+
+
+
+  <div class="Ourteam">
+    <h2>Our Team</h2>
+
+    <div class="CaruselTeam">
+      <img class="bubble" src="./svg/left.svg" alt="" srcset="">
+
+      <div class="services-grid">
+
+        <div class="service-card ourteam-card">
+          <img class="Team" src="./img/OurTeam/employee1.png" alt="">
+          <img src="/svg/flight_takeoff.svg" alt="Truckload" class="service-icon">
+          <h3 class="service-name">Tural Məmmədov</h3>
+          <p class="service-desc">
+            Ensuring your goods are transported efficiently, securely and delivered on time
+          </p>
+        </div>
+
+        <div class="service-card ourteam-card">
+          <img class="Team" src="./img/OurTeam/employee2.png" alt="">
+          <img src="/svg/flight_takeoff.svg" alt="Truckload" class="service-icon">
+          <h3 class="service-name">Aylin Məmmədova</h3>
+          <p class="service-desc">
+            Ensuring your goods are transported efficiently, securely and delivered on time
+          </p>
+        </div>
+        <div class="service-card ourteam-card">
+          <img class="Team" src="./img/OurTeam/employee3.png" alt="">
+          <img src="/svg/flight_takeoff.svg" alt="Truckload" class="service-icon">
+          <h3 class="service-name">Nərgiz Əliyeva</h3>
+          <p class="service-desc">
+            Ensuring your goods are transported efficiently, securely and delivered on time
+          </p>
+        </div>
+        <div class="service-card ourteam-card">
+          <img class="Team" src="./img/OurTeam/employee4.png" alt="">
+          <img src="/svg/flight_takeoff.svg" alt="Truckload" class="service-icon">
+          <h3 class="service-name">Tural Məmmədov</h3>
+          <p class="service-desc">
+            Ensuring your goods are transported efficiently, securely and delivered on time
+          </p>
+        </div>
+
+        <div class="service-card ourteam-card">
+          <img class="Team" src="./img/OurTeam/employee5.png" alt="">
+          <img src="/svg/flight_takeoff.svg" alt="Truckload" class="service-icon">
+          <h3 class="service-name">Aylin Məmmədova</h3>
+          <p class="service-desc">
+            Ensuring your goods are transported efficiently, securely and delivered on time
+          </p>
+        </div>
+        <div class="service-card ourteam-card">
+          <img class="Team" src="./img/OurTeam/employee6.png" alt="">
+          <img src="/svg/flight_takeoff.svg" alt="Truckload" class="service-icon">
+          <h3 class="service-name">Nərgiz Əliyeva</h3>
+          <p class="service-desc">
+            Ensuring your goods are transported efficiently, securely and delivered on time
+          </p>
+        </div>
+
+
+      </div>
+
+      <img class="bubble" src="./svg/right.svg" alt="" srcset="">
+    </div>
+  </div>
+
+
+
+
+  <div class="solution">
+    <section class="solution-section">
+      <div class="solution-header">
+        <h2>
+          <span class="highlight">Keep your cargo moving with Xi'an Absheron Logistics solutions</span>
+
+        </h2>
+        <p>
+          Enhance productivity and achieve success with real-time visibility
+          and automation at every stage of your workflow. Our innovative
+          solutions empower teams to work efficiently, make smarter decisions,
+          and deliver with confidence. By streamlining processes and ensuring
+          uninterrupted operations, we help you exceed customer expectations
+          and stay ahead in a fast-paced environment. Unlock actionable
+          insights, optimize workflows, and drive measurable results with our
+          seamless tools designed to transform your business.
+        </p>
+      </div>
+      <div class="solution-grid">
+        <div class="solution-card">
+          <img src="/svg/solution1.svg" alt="Building" class="solution-icon" />
+          <div class="solution-target">
+            <div class="solution-number" data-target="83">0%</div>
+            <div class="solution-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </div>
+          </div>
+        </div>
+        <div class="solution-card">
+          <img src="/svg/solution2.svg" alt="Train" class="solution-icon" />
+          <div class="solution-target">
+            <div class="solution-number" data-target="93">0%</div>
+            <div class="solution-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </div>
+          </div>
+        </div>
+        <div class="solution-card">
+          <img src="/svg/solution3.svg" alt="Truck" class="solution-icon" />
+          <div class="solution-target">
+            <div class="solution-number" data-target="65">0%</div>
+            <div class="solution-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </div>
+          </div>
+        </div>
+        <div class="solution-card">
+          <img src="/svg/solution4.svg" alt="Box" class="solution-icon" />
+          <div class="solution-target">
+            <div class="solution-number" data-target="85">0%</div>
+            <div class="solution-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="solution partners">
+    <section class="solution-section ourparners">
+      <h2>Our Partners</h2>
+      <br><br>
+      <div class="track">
+        <!-- logos -->
+        <div class="slide">
+          <img src="/img/PartnerImage/Alm.jpg">
+        </div>
+        <div class="line"></div>
+        <div class="slide">
+          <img src="/img/PartnerImage/Express.png">
+        </div>
+        <div class="line"></div>
+        <div class="slide">
+          <img src="/img/PartnerImage/MilliBroker.png" alt="MilliBroker">
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  <!-- <div class="map">
+    <div class="map-border">
+      <img class="map-img" src="./img/map.png" alt="" srcset="" />
+    </div>
+  </div> -->
+
+  <div class="footer">
+    <div class="footer-bg">
+      <div class="footer-blur footer-blur-blue"></div>
+      <div class="footer-blur footer-blur-red"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-col logo-col">
+        <img src="/img/logo.png" alt="XI'AN ASHBERON LOGISTICS" class="footer-logo" />
+      </div>
+
+      <div class="footer-main-sections">
+        <!-- First section: About, Media, Others -->
+        <div class="footer-section footer-section-left">
+          <div class="footer-col">
+            <h4>Haqqımızda</h4>
+            <a href="#">Şirkət haqqında</a>
+            <a href="#">Dəyərlərimiz</a>
+            <a href="#">Strateji partnyorlar</a>
+            <a href="#">Daşıma marşurutları</a>
+          </div>
+          <div class="footer-col">
+            <h4>Media</h4>
+            <a href="#">Xəbərlər</a>
+            <a href="#">Fotoqaleriya</a>
+            <a href="#">Videoqaleriya</a>
+          </div>
+          <div class="footer-col">
+            <h4>Digər</h4>
+            <a href="#">Xidmətlər</a>
+
+            <a href="#">Əlaqə</a>
+          </div>
+        </div>
+
+        <!-- Second section: Contact, Follow us -->
+        <div class="footer-section footer-section-right">
+          <div class="footer-col contact-col">
+            <h4>Contact</h4>
+            <a href="mailto:info@xianasberon.com">
+              <img src="/svg/mail.svg" alt="mail" class="footer-icon" />
+              info@xianasberon.com
+            </a>
+            <a href="#">
+              <img src="/svg/distance.svg" alt="location" class="footer-icon" />
+              Room 401, No. 3399, Gangze road,<br />
+              Xi'an Chanba International Port,<br />
+              Xi'an, China
+            </a>
+            <a href="tel:+8615694823698">
+              <img src="/svg/call.svg" alt="phone" class="footer-icon" />
+              +86 15694823698
+            </a>
+            <a href="tel:+8613072936683" style="margin-left: 30px">
+              +86 13072936683
+            </a>
+          </div>
+          <div class="footer-col social-col">
+            <h4>Follow us</h4>
+            <div class="footer-social">
+              <a href="#"><span class="footer-social-circle"><img src="/svg/facebook.svg" alt="Facebook" /></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/instagram.svg" alt="Instagram" /></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/linkedin.svg" alt="LinkedIn" /></span></a>
+              <a href="#"><span class="footer-social-circle"><img src="/svg/x.svg" alt="X" /></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-links">
+        Legal | Terms of Use | Privacy Policy | Supply Chain Transparency
+      </div>
+      <div class="footer-copyright">© XI' AN 2025, All right reserved</div>
+    </div>
+  </div>
+
+  <script src="/js/navbar.js"></script>
+  <script src="/js/news.js"></script>
+  <script src="/js/map.js"></script>
+  <script src="/js/solution.js"></script>
+  <script src="/js/faq.js"></script>
+  <script src="/js/partner.js"></script>
+  <script src="/js/team.js"></script>
+</body>
+
+
+</html>
