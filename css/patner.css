@@ -231,5 +231,22 @@
             font-size: 18px;
             z-index: 10;
         }
+
         
- 
+        
+ @media (max-width: 768px) {
+
+    .track {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .slide {
+        flex: 0;
+    }
+
+    .slide img {
+       scale: 1.3;
+    }
+ }
