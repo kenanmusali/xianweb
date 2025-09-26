@@ -121,6 +121,7 @@ function setTheme(theme, initialLoad = false) {
         root.style.setProperty('--border-color', '#333333');
         root.style.setProperty('--background3', 'linear-gradient(to bottom, #1E3A47, #121212)');
         root.style.setProperty('--black-filter', ' brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(335deg) brightness(103%) contrast(101%)');
+        root.style.setProperty('--Logo', ' brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(127deg) brightness(103%) contrast(103%)');
 
 
     } else {
@@ -142,6 +143,7 @@ function setTheme(theme, initialLoad = false) {
         root.style.setProperty('--border-color', '#e4e4e4');
         root.style.setProperty('--background3', 'linear-gradient(to bottom, #C9E3EE, #FFFFFF)');
         root.style.setProperty('--black-filter', ' brightness(0) saturate(100%)');
+        root.style.setProperty('--Logo', ' none');
 
     }
 

@@ -218,6 +218,7 @@
             max-width: 150px;
             max-height: 80px;
             object-fit: contain;
+            filter: var(--Logo);
         }
         
      
