@@ -46,6 +46,18 @@ width: 40rem;
     border-bottom: 4px solid var(--cyan);
     border-radius: 10px;
     background-color: #F4F6FA;
+    box-shadow: 1px 3px 10px rgba(7, 139, 216, 0.1);
+}
+
+
+
+.Team1 {
+        display: flex !important;
+    position: absolute;
+    top:-15%;          
+    left: 70%;  
+    height: 10rem;  
+    display: none !important;
 }
 
 .ourteam-card {

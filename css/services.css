@@ -12,6 +12,24 @@
     color: var(--text);
 }
 
+
+.service-desc a {
+    text-decoration: none;
+}
+
+.title-desc {
+    color: var(--cyan1) !important;
+    font-weight: 500;
+}
+
+.service-card:hover .title-desc {
+    color: var(--white) !important;
+}
+
+.service-desc a:hover {
+    text-decoration: underline;
+}
+
 .services-title .highlight {
     font-size: 2.2rem;
     font-weight: 600;
@@ -41,6 +59,7 @@
     z-index: 9;
     position: relative;
     /* overflow: hidden; */
+    padding-right: 4rem;
 }
 
 .service-card img {
@@ -57,6 +76,16 @@
     height: 48px;
     margin-bottom: 18px;
     transition: all 0.3s ease;
+}
+
+.div-service-desc img {
+    display: block;
+}
+
+.div-service-desc {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .service-name {
@@ -121,38 +150,57 @@
 /* Individual service icons */
 .service-card:nth-child(1)::after {
     /* mask-image: url('/svg/flight_takeoff.svg'); */
-display: none;
+    display: none;
 
 }
 
 .service-card:nth-child(2)::after {
     /* mask-image: url('/svg/services6.svg'); */
-display: none;
+    display: none;
 
 }
 
 .service-card:nth-child(3)::after {
     /* mask-image: url('/svg/deployed_code_account.svg'); */
-display: none;
+    display: none;
 
 }
 
 .service-card:nth-child(4)::after {
     /* mask-image: url('/svg/box_add.svg'); */
-display: none;
+    display: none;
 
 }
 
 .service-card:nth-child(5)::after {
     /* mask-image: url('/svg/services2.svg'); */
-display: none;
+    display: none;
 
 }
 
 .service-card:nth-child(6)::after {
     /* mask-image: url('/svg/services5.svg'); */
-display: none;
+    display: none;
 
+}
+
+.qr {
+    display: block !important;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.qr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+
+}
+
+.service-card:hover .qr {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7496%) hue-rotate(128deg) brightness(96%) contrast(100%);
 }
 
 /* Responsive styles - matching FAQ/solution approach */
