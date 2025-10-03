@@ -165,61 +165,82 @@ function updateActiveThemeIndicator(theme) {
         });
 }
 
-// Add this new function to update the world map image based on theme
+// function updateWorldMapImage(isDark) {
+//     const worldMapImage = document.querySelector('.world-map-bg .main-image');
+//     if (worldMapImage) {
+//         if (isDark) {
+//             worldMapImage.src = '/svg/Country/world1-dark.svg';
+//             worldMapImage.setAttribute('data-theme', 'dark');
+//         } else {
+//             worldMapImage.src = '/svg/Country/world1.svg';
+//             worldMapImage.setAttribute('data-theme', 'light');
+//         }
+//     }
+// }
+
+// const countryHovers = document.querySelectorAll('.country-hover');
+// const mainImage = document.querySelector('.main-image');
+
+// function getImagePath(countryCode, isDark) {
+//     const suffix = isDark ? '-dark' : '';
+//     return `/svg/Country/${countryCode}${suffix}.svg`;
+// }
+
+// function isDarkModeActive() {
+//     const mainImage = document.querySelector('.main-image');
+//     return mainImage && mainImage.getAttribute('data-theme') === 'dark';
+// }
+
+// countryHovers.forEach(country => {
+//     country.style.opacity = '0';
+//     country.style.position = 'absolute';
+//     country.style.pointerEvents = 'auto';
+    
+//     country.addEventListener('mouseenter', function(e) {
+//         const countryCode = this.classList[1];
+//         const isDark = isDarkModeActive();
+        
+//         mainImage.src = getImagePath(countryCode, isDark);
+//         mainImage.setAttribute('data-country', countryCode);
+//     });
+    
+//     country.addEventListener('mouseleave', function(e) {
+//         const isDark = isDarkModeActive();
+//         mainImage.src = getImagePath('world1', isDark);
+//         mainImage.setAttribute('data-country', 'world1');
+//     });
+// });
+
+// document.querySelector('.world-map-bg').style.pointerEvents = 'none';
+// document.querySelector('.image').style.pointerEvents = 'none';
+
+
+
 function updateWorldMapImage(isDark) {
     const worldMapImage = document.querySelector('.world-map-bg .main-image');
     if (worldMapImage) {
         if (isDark) {
-            worldMapImage.src = '/svg/Country/world1-dark.svg';
+            worldMapImage.src = '/svg/Country/world-dark.svg';
             worldMapImage.setAttribute('data-theme', 'dark');
         } else {
-            worldMapImage.src = '/svg/Country/world1.svg';
+            worldMapImage.src = '/svg/Country/world.svg';
             worldMapImage.setAttribute('data-theme', 'light');
         }
     }
 }
 
-// Get all country hover elements
 const countryHovers = document.querySelectorAll('.country-hover');
 const mainImage = document.querySelector('.main-image');
 
-// Function to get the appropriate image path based on current theme
 function getImagePath(countryCode, isDark) {
     const suffix = isDark ? '-dark' : '';
-    return `/svg/Country/${countryCode}${suffix}.svg`;
 }
 
-// Function to check if dark mode is currently active
 function isDarkModeActive() {
     const mainImage = document.querySelector('.main-image');
     return mainImage && mainImage.getAttribute('data-theme') === 'dark';
 }
 
-// Add event listeners to each country
-countryHovers.forEach(country => {
-    // Prevent layout shifting by making hover images invisible but still interactive
-    country.style.opacity = '0';
-    country.style.position = 'absolute';
-    country.style.pointerEvents = 'auto';
-    
-    country.addEventListener('mouseenter', function(e) {
-        // Get the country code from class name
-        const countryCode = this.classList[1];
-        const isDark = isDarkModeActive();
-        
-        // Update main image source with theme consideration
-        mainImage.src = getImagePath(countryCode, isDark);
-        mainImage.setAttribute('data-country', countryCode);
-    });
-    
-    country.addEventListener('mouseleave', function(e) {
-        // Reset to world map when mouse leaves with theme consideration
-        const isDark = isDarkModeActive();
-        mainImage.src = getImagePath('world1', isDark);
-        mainImage.setAttribute('data-country', 'world1');
-    });
-});
 
-// Make parent containers not block events but don't affect layout
 document.querySelector('.world-map-bg').style.pointerEvents = 'none';
 document.querySelector('.image').style.pointerEvents = 'none';

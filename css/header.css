@@ -118,6 +118,213 @@
 
 }
 
+.main-image-hover {
+  position: absolute;
+  top: 39.5vw;                  /* Move top edge to vertical center */
+  right: 14vw;                  /* Align to the right side */
+  transform: translateY(-50%); /* Shift up by half its height to truly center vertically */
+  height: 26.55vw;
+  object-fit: cover;
+  animation: playOnce 2s steps(10) forwards; 
+}
+/* Fade-in keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* xian */
+.xian-hover {
+    position: absolute;
+    top: 33vw;
+    right: 24vw;
+    font-size: 0.9vw;
+    font-weight: 600;
+    color: var(--cyan1);
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0s;
+}
+
+/* qingdao */
+.qingdao-hover {
+    position: absolute;
+    top: 31vw;
+    right: 11.5vw;
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: var(--cyan1);
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+/* shanghai */
+.shanghai-hover {
+    position: absolute;
+    top: 33vw;
+    right: 11vw;
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: var(--cyan1);
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+/* shunde */
+.shunde-hover {
+    position: absolute;
+    top: 37.5vw;
+    right: 13.2vw;
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: var(--cyan1);
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+/* hainan */
+.hainan-hover {
+    position: absolute;
+    top: 39.2vw;
+    right: 19.5vw;
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: var(--cyan1);
+    z-index: 2;
+    text-align: right;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 2s;
+}
+
+/* horqos */
+.horqos-hover {
+    position: absolute;
+    top: 26.8vw;
+    right: 27.8vw;
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: var(--cyan1);
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 2.5s;
+}
+
+/* aktau */
+.aktau-hover {
+    position: absolute;
+    top: 27vw;
+    right: 40.3vw;
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: var(--cyan1);
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 3s;
+}
+
+/* baku */
+.baku-hover {
+    position: absolute;
+    top: 30vw;
+    right: 41.3vw;
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: var(--cyan1);
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 3.5s;
+}
+
+/* poti */
+.poti-hover {
+    position: absolute;
+    top: 29.5vw;
+    right: 46.5vw;
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: var(--cyan1);
+    z-index: 2;
+    text-align: right;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 4s;
+}
+
+/* istanbul */
+.istanbul-hover {
+    position: absolute;
+    top: 28.8vw;
+    right: 52.5vw;
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: var(--cyan1);
+    z-index: 2;
+    text-align: right;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 4.5s;
+}
+
+/* egypt */
+.egypt-hover {
+    position: absolute;
+    top: 32.8vw;
+    right: 46.5vw;
+    font-size: 0.7vw;
+    font-weight: 600;
+    color: var(--cyan1);
+    z-index: 2;
+    text-align: right;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .world-map-bg .main-image {
   width: 100%;
   height: fit-content;
