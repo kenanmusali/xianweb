@@ -158,7 +158,7 @@
     z-index: 2;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 0.5s;
+    animation-delay: 0.4s;
 }
 
 /* shanghai */
@@ -172,7 +172,7 @@
     z-index: 2;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 1s;
+    animation-delay: 0.4s;
 }
 
 /* shunde */
@@ -186,7 +186,7 @@
     z-index: 2;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 1.5s;
+    animation-delay: 0.4s;
 }
 
 /* hainan */
@@ -201,7 +201,7 @@
     text-align: right;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 2s;
+    animation-delay: 0.4s;
 }
 
 /* horqos */
@@ -215,7 +215,7 @@
     z-index: 2;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 2.5s;
+    animation-delay: 0.4s;
 }
 
 /* aktau */
@@ -229,7 +229,7 @@
     z-index: 2;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 /* baku */
@@ -243,7 +243,7 @@
     z-index: 2;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 3.5s;
+    animation-delay: 1.7s;
 }
 
 /* poti */
@@ -258,7 +258,7 @@
     text-align: right;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 4s;
+    animation-delay: 2.4s;
 }
 
 /* istanbul */
@@ -273,7 +273,7 @@
     text-align: right;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 4.5s;
+    animation-delay: 3.5s;
 }
 
 /* egypt */
@@ -288,7 +288,7 @@
     text-align: right;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
-    animation-delay: 5s;
+    animation-delay: 3.4s;
 }
 
 
