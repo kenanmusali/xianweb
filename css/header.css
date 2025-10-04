@@ -108,6 +108,10 @@
   /* padding-inline: 3rem; */
 }
 
+.world-map-bg p{
+  color: #29799b !important;
+}
+
 .world-map-bg {
   display: flex;
   width: 100%;
