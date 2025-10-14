@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    let currentTheme = localStorage.getItem('theme') || 'auto';
+    let currentTheme = localStorage.getItem('theme') || 'Auto';
 
     setTheme(currentTheme, true);
 
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
 
-            const theme = item.textContent.trim();
+            const theme = getThemeFromText(item.textContent.trim());
             currentTheme = theme;
             localStorage.setItem('theme', theme);
 
@@ -86,21 +86,70 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: Dark)');
     darkModeMediaQuery.addEventListener('change', () => {
-        if (currentTheme === 'auto') setTheme('auto');
+        if (currentTheme === 'Auto') setTheme('Auto');
     });
 });
+
+function getThemeFromText(text) {
+    // Map language-specific text to standard theme values
+    const themeMap = {
+        // English
+        'Auto': 'Auto',
+        'Light': 'Light', 
+        'Dark': 'Dark',
+        
+        // Russian
+        'Авто': 'Auto',
+        'Светлый': 'Light',
+        'Тёмный': 'Dark',
+        
+        // Chinese
+        '自动': 'Auto',
+        '浅色': 'Light',
+        '深色': 'Dark'
+    };
+    
+    return themeMap[text] || 'Auto';
+}
+
+function getThemeDisplayText(theme) {
+    const htmlLang = document.documentElement.lang || 'en';
+    
+    const themeTexts = {
+        'en': {
+            'Auto': 'Auto',
+            'Light': 'Light',
+            'Dark': 'Dark'
+        },
+        'ru': {
+            'Auto': 'Авто',
+            'Light': 'Светлый', 
+            'Dark': 'Тёмный'
+        },
+        'zh': {
+            'Auto': '自动',
+            'Light': '浅色',
+            'Dark': '深色'
+        }
+    };
+    
+    const language = htmlLang.startsWith('zh') ? 'zh' : 
+                    htmlLang.startsWith('ru') ? 'ru' : 'en';
+    
+    return themeTexts[language][theme] || theme;
+}
 
 function setTheme(theme, initialLoad = false) {
     const root = document.documentElement;
 
-    const isDark = theme === 'auto'
-        ? window.matchMedia('(prefers-color-scheme: dark)').matches
-        : theme === 'dark';
+    const isDark = theme === 'Auto'
+        ? window.matchMedia('(prefers-color-scheme: Dark)').matches
+        : theme === 'Dark';
 
     updateActiveThemeIndicator(theme);
-    updateWorldMapImage(isDark); // Update the world map image
+    updateWorldMapImage(isDark); 
 
     if (isDark) {
         // Dark Mode
@@ -159,7 +208,8 @@ function setTheme(theme, initialLoad = false) {
 function updateActiveThemeIndicator(theme) {
     document.querySelectorAll('.themes .menu-items a, .mobile .nav-about .menu-items a')
         .forEach(item => {
-            if (item.textContent.trim() === theme) {
+            const itemTheme = getThemeFromText(item.textContent.trim());
+            if (itemTheme === theme) {
                 item.classList.add('active-theme');
             } else {
                 item.classList.remove('active-theme');
@@ -167,66 +217,15 @@ function updateActiveThemeIndicator(theme) {
         });
 }
 
-// function updateWorldMapImage(isDark) {
-//     const worldMapImage = document.querySelector('.world-map-bg .main-image');
-//     if (worldMapImage) {
-//         if (isDark) {
-//             worldMapImage.src = '/svg/Country/world1-dark.svg';
-//             worldMapImage.setAttribute('data-theme', 'dark');
-//         } else {
-//             worldMapImage.src = '/svg/Country/world1.svg';
-//             worldMapImage.setAttribute('data-theme', 'light');
-//         }
-//     }
-// }
-
-// const countryHovers = document.querySelectorAll('.country-hover');
-// const mainImage = document.querySelector('.main-image');
-
-// function getImagePath(countryCode, isDark) {
-//     const suffix = isDark ? '-dark' : '';
-//     return `/svg/Country/${countryCode}${suffix}.svg`;
-// }
-
-// function isDarkModeActive() {
-//     const mainImage = document.querySelector('.main-image');
-//     return mainImage && mainImage.getAttribute('data-theme') === 'dark';
-// }
-
-// countryHovers.forEach(country => {
-//     country.style.opacity = '0';
-//     country.style.position = 'absolute';
-//     country.style.pointerEvents = 'auto';
-    
-//     country.addEventListener('mouseenter', function(e) {
-//         const countryCode = this.classList[1];
-//         const isDark = isDarkModeActive();
-        
-//         mainImage.src = getImagePath(countryCode, isDark);
-//         mainImage.setAttribute('data-country', countryCode);
-//     });
-    
-//     country.addEventListener('mouseleave', function(e) {
-//         const isDark = isDarkModeActive();
-//         mainImage.src = getImagePath('world1', isDark);
-//         mainImage.setAttribute('data-country', 'world1');
-//     });
-// });
-
-// document.querySelector('.world-map-bg').style.pointerEvents = 'none';
-// document.querySelector('.image').style.pointerEvents = 'none';
-
-
-
 function updateWorldMapImage(isDark) {
     const worldMapImage = document.querySelector('.world-map-bg .main-image');
     if (worldMapImage) {
         if (isDark) {
             worldMapImage.src = '/svg/Country/world-dark.svg';
-            worldMapImage.setAttribute('data-theme', 'dark');
+            worldMapImage.setAttribute('data-theme', 'Dark');
         } else {
             worldMapImage.src = '/svg/Country/world.svg';
-            worldMapImage.setAttribute('data-theme', 'light');
+            worldMapImage.setAttribute('data-theme', 'Light');
         }
     }
 }
@@ -235,14 +234,13 @@ const countryHovers = document.querySelectorAll('.country-hover');
 const mainImage = document.querySelector('.main-image');
 
 function getImagePath(countryCode, isDark) {
-    const suffix = isDark ? '-dark' : '';
+    const suffix = isDark ? '-Dark' : '';
 }
 
 function isDarkModeActive() {
     const mainImage = document.querySelector('.main-image');
-    return mainImage && mainImage.getAttribute('data-theme') === 'dark';
+    return mainImage && mainImage.getAttribute('data-theme') === 'Dark';
 }
-
 
 document.querySelector('.world-map-bg').style.pointerEvents = 'none';
 document.querySelector('.image').style.pointerEvents = 'none';
