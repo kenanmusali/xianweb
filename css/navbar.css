@@ -499,7 +499,7 @@
 /* Responsive Styles -------------------------------------------------------------------------------*/
 
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
     .mobile {
         display: flex;
 
