@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Foto Gallery</title>
   <link rel="icon" href="./img/favicon.png" type="image/png" />
-
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/css/root.css" />
 </head>
 
@@ -63,9 +63,9 @@
           <img class="img1" src="/svg/chevron.down.svg" alt="" />
           <div class="dropdown-menu">
             <div class="menu-items">
-              <a>dark</a>
-              <a>light</a>
-              <a>auto</a>
+              <a>Dark</a>
+              <a>Light</a>
+              <a>Auto</a>
             </div>
           </div>
         </div>
@@ -205,13 +205,13 @@
 
 
 
-  <div class="aboutimg foto">
+  <div class="  foto">
     <div class="content">
       <h2>Fotoqaleriya</h2>
     </div>
   </div>
 
-  <div class="fotogallery">
+  <!-- <div class="fotogallery">
     <div class="gallery-grid">
       <div class="gallery-item">
         <img src="img/fotogallery1.png" alt="Gallery Image 1" />
@@ -373,7 +373,91 @@
         </div>
       </div>
     </div>
-  </div>
+
+
+  </div> -->
+
+
+
+
+<div class="fotogallery">
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="img/foto/1/img1.jpg" alt="Gallery Image 1" />
+            <div class="gallery-item-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+        </div>
+        
+        <div class="gallery-item">
+            <img src="img/foto/2/img1.jpeg" alt="Gallery Image 2" />
+            <div class="gallery-item-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox-modal" class="lightbox-modal">
+    <div class="lightbox-content">
+        <div class="lightbox-header">
+            <div class="lightbox-image-info"> <span id="current-img-num">1</span> of <span id="total-img">1</span></div>
+            <div class="lightbox-controls">
+                <button class="lightbox-btn zoom-in" title="Zoom In">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+                <button class="lightbox-btn zoom-out" title="Zoom Out">
+                    <i class="fas fa-search-minus"></i>
+                </button>
+                <button class="lightbox-btn download-btn" title="Download">
+                    <i class="fas fa-download"></i>
+                </button>
+                <button class="lightbox-btn close-btn" title="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="lightbox-body">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+        <div class="lightbox-nav">
+            <button class="lightbox-nav-btn prev-btn" title="Previous Image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav-btn next-btn" title="Next Image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="lightbox-footer">
+            <p id="lightbox-caption"></p>
+        </div>
+    </div>
+</div>
+
+<!-- Sub-gallery Modal -->
+<div id="subgallery-modal" class="subgallery-modal">
+    <div class="subgallery-content">
+        <div class="subgallery-header">
+            <h2 class="subgallery-title">Gallery</h2>
+            <button class="subgallery-close-btn">
+                <i class="fas fa-times"></i> Close
+            </button>
+        </div>
+        <div class="subgallery-body">
+            <div class="subgallery-grid" id="subgallery-grid">
+                <!-- Sub-gallery items will be added here by JavaScript -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
   <footer class="footer">
     <div class="footer-bg">
       <div class="footer-blur footer-blur-blue"></div>
@@ -452,6 +536,7 @@
   </footer>
 
   <script src="/js/navbar.js"></script>
+  <script src="/js/fotogallery.js"></script>
 </body>
 
 </html>
