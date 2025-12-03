@@ -72,7 +72,7 @@
 }
 
 .cta-button1 a {
-  color: white;
+  color: white !important;
 }
 .cta-button1:hover a {
   color: white;
