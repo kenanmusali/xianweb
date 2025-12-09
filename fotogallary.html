@@ -205,11 +205,13 @@
 
 
 
-  <div class="  foto">
-    <div class="content">
-      <h2>Fotoqaleriya</h2>
-    </div>
+
+
+  <div class="HeaderTitle">
+  <div class="content">
+    <h2>Fotoqaleriya</h2>
   </div>
+</div>
 
   <!-- <div class="fotogallery">
     <div class="gallery-grid">
@@ -378,45 +380,109 @@
   </div> -->
 
 
-
-
 <div class="fotogallery">
     <div class="gallery-grid">
 
-<div class="gallery-item">
-    <div class="img-wrapper">
-        <img src="img/foto/1/img1.jpg" alt="Gallery Image 1" />
-        <div class="magnify-icon">
-            <i class="fas fa-search"></i>
+        <!-- Main Gallery Item 1 with sub-gallery -->
+        <div class="gallery-item" 
+             data-subgallery="gallery-1" 
+             data-gallery-title="Gallery 1">
+            <div class="img-wrapper">
+                <img src="img/foto/1/img1.jpg" alt="Gallery Image 1" />
+                <div class="magnify-icon">
+                <i class="fa-regular fa-images"></i>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="gallery-item-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+            
+            <!-- Sub-gallery data (hidden) -->
+            <div class="subgallery-data" style="display: none;">
+                <div class="subgallery-item" 
+                     data-src="img/foto/1/img1.jpg" 
+                     data-caption="Image 1 description">
+                </div>
+                <div class="subgallery-item" 
+                     data-src="img/foto/1/img2.jpg" 
+                     data-caption="Image 2 description">
+                </div>
+                <div class="subgallery-item" 
+                     data-src="img/foto/1/img3.jpeg" 
+                     data-caption="Image 3 description">
+                </div>
+                <div class="subgallery-item" 
+                     data-src="img/foto/1/img4.jpeg" 
+                     data-caption="Image 4 description">
+                </div>
+                <div class="subgallery-item" 
+                     data-src="img/foto/1/img5.jpeg" 
+                     data-caption="Image 5 description">
+                </div>
+                <div class="subgallery-item" 
+                     data-src="img/foto/1/img6.jpeg" 
+                     data-caption="Image 6 description">
+                </div>
+            </div>
         </div>
-        <div class="overlay"></div>
-    </div>
-    <div class="gallery-item-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-    </div>
-</div>
         
-      <div class="gallery-item">
-    <div class="img-wrapper">
-        <img src="img/foto/2/img2.jpeg" alt="Gallery Image 2" />
-        <div class="magnify-icon">
-            <i class="fas fa-search"></i>
+        <!-- Main Gallery Item 2 with sub-gallery -->
+        <div class="gallery-item" 
+             data-subgallery="gallery-2" 
+             data-gallery-title="Gallery 2">
+            <div class="img-wrapper">
+                <img src="img/foto/2/img2.jpeg" alt="Gallery Image 2" />
+                <div class="magnify-icon">
+                 <i class="fa-regular fa-images"></i>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="gallery-item-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            </div>
+            
+            <!-- Sub-gallery data (hidden) -->
+            <div class="subgallery-data" style="display: none;">
+                <div class="subgallery-item" 
+                     data-src="img/foto/2/img1.jpeg" 
+                     data-caption="Gallery 2 Image 1">
+                </div>
+                <div class="subgallery-item" 
+                     data-src="img/foto/2/img2.jpeg" 
+                     data-caption="Gallery 2 Image 2">
+                </div>
+                <div class="subgallery-item" 
+                     data-src="img/foto/2/img3.jpeg" 
+                     data-caption="Gallery 2 Image 3">
+                </div>
+                <div class="subgallery-item" 
+                     data-src="img/foto/2/img4.jpeg" 
+                     data-caption="Gallery 2 Image 4">
+                </div>
+                <div class="subgallery-item" 
+                     data-src="img/foto/2/img5.jpeg" 
+                     data-caption="Gallery 2 Image 5">
+                </div>
+                <div class="subgallery-item" 
+                     data-src="img/foto/2/img6.jpeg" 
+                     data-caption="Gallery 2 Image 6">
+                </div>
+            </div>
         </div>
-        <div class="overlay"></div>
-    </div>
-    <div class="gallery-item-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-    </div>
-</div>
-    
+        
+        <!-- Add more gallery items as needed -->
+        
     </div>
 </div>
 
-<!-- Lightbox Modal -->
+<!-- Lightbox Modal (same as before) -->
 <div id="lightbox-modal" class="lightbox-modal">
     <div class="lightbox-content">
         <div class="lightbox-header">
-            <div class="lightbox-image-info"> <span id="current-img-num">1</span> of <span id="total-img">1</span></div>
+            <div class="lightbox-image-info"> 
+                <span id="current-img-num">1</span> of <span id="total-img">1</span>
+            </div>
             <div class="lightbox-controls">
                 <button class="lightbox-btn zoom-in" title="Zoom In">
                     <i class="fas fa-search-plus"></i>
@@ -465,7 +531,6 @@
         </div>
     </div>
 </div>
-
 
 
 

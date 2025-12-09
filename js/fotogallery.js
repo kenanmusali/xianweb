@@ -4,31 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const subgalleryModal = document.getElementById('subgallery-modal');
 
     let currentZoom = 1;
-    let currentGalleryIndex = null;
+    let currentGallery = null;
     let currentSubGallery = [];
     let currentImageIndex = 0;
-
-    const subGalleries = {
-        1: [
-            { src: 'img/foto/1/img1.jpg', },
-            { src: 'img/foto/1/img2.jpg', },
-            { src: 'img/foto/1/img3.jpeg', },
-            { src: 'img/foto/1/img4.jpeg', },
-            { src: 'img/foto/1/img5.jpeg', },
-            { src: 'img/foto/1/img6.jpeg', },
-
-        ],
-        2: [
-            { src: 'img/foto/2/img1.jpeg', },
-            { src: 'img/foto/2/img2.jpeg', },
-            { src: 'img/foto/2/img3.jpeg', },
-            { src: 'img/foto/2/img4.jpeg', },
-            { src: 'img/foto/2/img5.jpeg', },
-            { src: 'img/foto/2/img6.jpeg', },
-
-        ]
-    };
-
 
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
@@ -42,53 +20,73 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentImgNum = document.getElementById('current-img-num');
     const totalImg = document.getElementById('total-img');
 
-    galleryItems.forEach((item, index) => {
+    galleryItems.forEach((item) => {
         item.addEventListener('click', function () {
-            const imgIndex = index + 1;
-            currentGalleryIndex = imgIndex;
-
-            if (subGalleries[imgIndex]) {
-                showSubGallery(imgIndex);
+            const galleryTitle = this.getAttribute('data-gallery-title');
+            const subGalleryId = this.getAttribute('data-subgallery');
+            currentGallery = this;
+            
+            const subgalleryData = this.querySelector('.subgallery-data');
+            
+            if (subgalleryData) {
+                showSubGallery(this, galleryTitle);
             } else {
                 const img = this.querySelector('img');
                 const caption = this.querySelector('p').textContent;
-                currentSubGallery = [{ src: img.src, alt: img.alt, caption: caption }];
+                currentSubGallery = [{ 
+                    src: img.src, 
+                    alt: img.alt, 
+                    caption: caption 
+                }];
                 currentImageIndex = 0;
                 openLightbox(currentImageIndex);
             }
         });
     });
 
-    function showSubGallery(galleryIndex) {
+    function showSubGallery(galleryItem, galleryTitle) {
         subgalleryGrid.innerHTML = '';
-
-        document.querySelector('.subgallery-title').textContent = `Gallery ${galleryIndex} - ${subGalleries[galleryIndex].length} Images`;
-
-        subGalleries[galleryIndex].forEach((imgData, index) => {
-            const subItem = document.createElement('div');
-            subItem.className = 'subgallery-item';
-
+        
+        const subgalleryData = galleryItem.querySelector('.subgallery-data');
+        const subItems = subgalleryData.querySelectorAll('.subgallery-item');
+        
+        document.querySelector('.subgallery-title').textContent = 
+            `${galleryTitle} - ${subItems.length} Images`;
+        
+        subItems.forEach((subItem, index) => {
+            const imgSrc = subItem.getAttribute('data-src');
+            const imgCaption = subItem.getAttribute('data-caption');
+            const imgAlt = subItem.getAttribute('data-alt') || `Image ${index + 1}`;
+            
+            const subItemElement = document.createElement('div');
+            subItemElement.className = 'subgallery-item';
+            
             const img = document.createElement('img');
-            img.src = imgData.src;
-            img.alt = imgData.alt;
-
+            img.src = imgSrc;
+            img.alt = imgAlt;
+            
             const caption = document.createElement('p');
-            caption.textContent = imgData.caption;
-
-            subItem.appendChild(img);
-            subItem.appendChild(caption);
-
-            subItem.addEventListener('click', function () {
-                currentSubGallery = subGalleries[galleryIndex];
+            caption.textContent = imgCaption;
+            
+            subItemElement.appendChild(img);
+            subItemElement.appendChild(caption);
+            
+            subItemElement.addEventListener('click', function () {
+                currentSubGallery = Array.from(subItems).map(item => ({
+                    src: item.getAttribute('data-src'),
+                    alt: item.getAttribute('data-alt') || '',
+                    caption: item.getAttribute('data-caption') || ''
+                }));
+                
                 currentImageIndex = index;
-
+                
                 subgalleryModal.style.display = 'none';
                 openLightbox(currentImageIndex);
             });
-
-            subgalleryGrid.appendChild(subItem);
+            
+            subgalleryGrid.appendChild(subItemElement);
         });
-
+        
         subgalleryModal.style.display = 'flex';
     }
 
@@ -147,8 +145,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     closeBtn.addEventListener('click', function () {
         lightboxModal.style.display = 'none';
-        if (currentGalleryIndex && subGalleries[currentGalleryIndex]) {
-            showSubGallery(currentGalleryIndex);
+        if (currentGallery) {
+            const galleryTitle = currentGallery.getAttribute('data-gallery-title');
+            showSubGallery(currentGallery, galleryTitle);
         }
     });
 
@@ -157,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     subgalleryModal.querySelector('.subgallery-close-btn').addEventListener('click', function () {
         subgalleryModal.style.display = 'none';
-        currentGalleryIndex = null;
+        currentGallery = null;
     });
 
     [lightboxModal, subgalleryModal].forEach(modal => {
@@ -165,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.target === modal) {
                 modal.style.display = 'none';
                 if (modal === subgalleryModal) {
-                    currentGalleryIndex = null;
+                    currentGallery = null;
                 }
             }
         });
@@ -173,32 +172,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.addEventListener('keydown', function (e) {
         if (lightboxModal.style.display === 'flex') {
-            if (e.key === 'Escape') {
-                lightboxModal.style.display = 'none';
-                if (currentGalleryIndex && subGalleries[currentGalleryIndex]) {
-                    showSubGallery(currentGalleryIndex);
-                }
-            }
-            if (e.key === 'ArrowRight') {
-                showNextImage();
-            }
-            if (e.key === 'ArrowLeft') {
-                showPrevImage();
-            }
-            if (e.key === '+') {
-                currentZoom += 0.1;
-                lightboxImg.style.transform = `scale(${currentZoom})`;
-            }
-            if (e.key === '-') {
-                if (currentZoom > 0.2) {
-                    currentZoom -= 0.1;
+            switch(e.key) {
+                case 'Escape':
+                    lightboxModal.style.display = 'none';
+                    if (currentGallery) {
+                        const galleryTitle = currentGallery.getAttribute('data-gallery-title');
+                        showSubGallery(currentGallery, galleryTitle);
+                    }
+                    break;
+                case 'ArrowRight':
+                    showNextImage();
+                    break;
+                case 'ArrowLeft':
+                    showPrevImage();
+                    break;
+                case '+':
+                    currentZoom += 0.1;
                     lightboxImg.style.transform = `scale(${currentZoom})`;
-                }
+                    break;
+                case '-':
+                    if (currentZoom > 0.2) {
+                        currentZoom -= 0.1;
+                        lightboxImg.style.transform = `scale(${currentZoom})`;
+                    }
+                    break;
             }
         } else if (subgalleryModal.style.display === 'flex') {
             if (e.key === 'Escape') {
                 subgalleryModal.style.display = 'none';
-                currentGalleryIndex = null;
+                currentGallery = null;
             }
         }
     });
