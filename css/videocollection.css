@@ -99,6 +99,30 @@
     display: flex;
 }
 
+.video-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-title {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--black);
+}
+
+.modal-video-title {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+
+
+
 .modal-content {
     position: relative;
     width: 90%;

@@ -210,75 +210,91 @@
 
 <div class="videocollection">
     <div class="video-collection-container">
-        
         <div class="video-grid">
+
             <!-- Video Thumbnail 1 -->
-            <div class="video-thumbnail" data-video-src="./video/video1.mp4">
-                <div class="thumbnail-image">
-                    <img src="./img/1xian.png" alt="Video 1 Thumbnail" />
-                    <div class="play-overlay">
-                        <div class="play-button">▶</div>
+            <div class="video-item">
+                <div class="video-thumbnail" data-video-src="./video/video1.mp4">
+                    <div class="thumbnail-image">
+                        <img src="./img/1xian.png" alt="Video 1 Thumbnail" />
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
                     </div>
                 </div>
+                <div class="video-title">Video Title 1</div>
             </div>
 
             <!-- Video Thumbnail 2 -->
-            <div class="video-thumbnail" data-video-src="./video/video2.mp4">
-                <div class="thumbnail-image">
-                    <img src="./img/2xian.png" alt="Video 2 Thumbnail" />
-                    <div class="play-overlay">
-                        <div class="play-button">▶</div>
+            <div class="video-item">
+                <div class="video-thumbnail" data-video-src="./video/video2.mp4">
+                    <div class="thumbnail-image">
+                        <img src="./img/2xian.png" alt="Video 2 Thumbnail" />
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
                     </div>
                 </div>
+                <div class="video-title">Video Title 2</div>
             </div>
 
             <!-- Video Thumbnail 3 -->
-            <div class="video-thumbnail" data-video-src="./video/video3.mp4">
-                <div class="thumbnail-image">
-                    <img src="./img/3xian.png" alt="Video 3 Thumbnail" />
-                    <div class="play-overlay">
-                        <div class="play-button">▶</div>
+            <div class="video-item">
+                <div class="video-thumbnail" data-video-src="./video/video3.mp4">
+                    <div class="thumbnail-image">
+                        <img src="./img/3xian.png" alt="Video 3 Thumbnail" />
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
                     </div>
                 </div>
+                <div class="video-title">Video Title 3</div>
             </div>
 
             <!-- Video Thumbnail 4 -->
-            <div class="video-thumbnail" data-video-src="./video/video4.mp4">
-                <div class="thumbnail-image">
-                    <img src="./img/4xian.png" alt="Video 4 Thumbnail" />
-                    <div class="play-overlay">
-                        <div class="play-button">▶</div>
+            <div class="video-item">
+                <div class="video-thumbnail" data-video-src="./video/video4.mp4">
+                    <div class="thumbnail-image">
+                        <img src="./img/4xian.png" alt="Video 4 Thumbnail" />
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
                     </div>
                 </div>
+                <div class="video-title">Video Title 4</div>
             </div>
 
             <!-- Video Thumbnail 5 -->
-            <div class="video-thumbnail" data-video-src="./video/video5.mp4">
-                <div class="thumbnail-image">
-                    <img src="./img/1xian.png" alt="Video 5 Thumbnail" />
-                    <div class="play-overlay">
-                        <div class="play-button">▶</div>
+            <div class="video-item">
+                <div class="video-thumbnail" data-video-src="./video/video5.mp4">
+                    <div class="thumbnail-image">
+                        <img src="./img/1xian.png" alt="Video 5 Thumbnail" />
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
                     </div>
                 </div>
+                <div class="video-title">Video Title 5</div>
             </div>
-            
-            <!-- etc.. -->
+
         </div>
     </div>
 </div>
 
+
 <div class="video-modal" id="videoModal">
     <div class="modal-content">
-        <button class="lightbox-btn close-btn" title="Close" cursorshover="true" id="closeModal">
-                    <i class="fas fa-times"></i>
-                </button>
-                <br>
+        <button class="lightbox-btn close-btn" title="Close" id="closeModal">
+            <i class="fas fa-times"></i>
+        </button>
+        <br>
         <video id="modalVideo" controls autoplay>
             <source id="modalVideoSource" src="" type="video/mp4">
-
         </video>
+        <div class="modal-video-title" id="modalVideoTitle"></div>
     </div>
 </div>
+
 
 
 
