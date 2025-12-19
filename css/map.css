@@ -30,7 +30,7 @@
 .map {
     display: flex;
     justify-content: center;
-    padding: 48px 20px;
+    padding: 20px 20px;
     width: 100%;
 }
 
@@ -46,6 +46,14 @@
    .map-border {
        padding: 6px;
    }
+}
+@media (max-width: 1024px) {
+.map-border .map-img:nth-child(1){
+    display: none;
+}
+.map-border .map-img:nth-child(2){
+    display: flex !important;
+}
 }
 
 /* Tablet */
@@ -84,4 +92,8 @@
        padding: 3px;
        box-shadow: 0 1px 1px var(--blue);
    }
+}
+
+.map-border .map-img:nth-child(2){
+    display: none;
 }
