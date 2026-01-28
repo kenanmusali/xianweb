@@ -51,7 +51,7 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 32px 55px 0;
+  padding: 32px 7rem 0;
   gap: 24px;
 }
 
@@ -151,7 +151,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 55px 40px;
+  padding: 32px 7rem 40px;
   font-size: 0.85rem;
   color: var(--black);
 }
