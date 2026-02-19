@@ -50,6 +50,9 @@
   margin-bottom: 32px;
 }
 
+.cta-button1 p{
+  color: white !important;
+}
 .cta-button1 {
   display: inline-flex;
   align-items: center;
@@ -642,7 +645,7 @@ h2 {
     margin-bottom: 1rem;
     line-height: 1.2;
     letter-spacing: -0.02em;
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
 }
 
 .HeaderTitle .content p {

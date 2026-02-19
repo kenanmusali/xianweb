@@ -175,6 +175,7 @@
     border-radius: 5px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     object-fit: contain;
+    min-width: 70%;
 }
 
 .lightbox-nav {
