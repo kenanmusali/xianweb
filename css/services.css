@@ -15,7 +15,7 @@
 .services {
     position: relative;
     z-index: 2 !important;
-    margin-top: 13rem;
+    /* margin-top: 13rem; */
 }
 
 
@@ -68,9 +68,9 @@
     padding-right: 4rem;
 }
 
-.service-card img {
+/* .service-card img {
     display: none;
-}
+} */
 
 .service-card:hover img {
     display: flex;
@@ -122,14 +122,31 @@
 
 .service-card:hover .service-name,
 .service-card:hover .service-desc {
-    color: #ffffff;
+    color: white !important;
+}
+.service-card-popup:hover .service-name,
+.service-card-popup:hover .service-desc {
+    color: white !important;
     transform: translateY(-45px);
     -webkit-transform: translateY(-45px);
     -moz-transform: translateY(-45px);
     -ms-transform: translateY(-45px);
     -o-transform: translateY(-45px);
-    width: 70%;
+    /* width: 70%; */
 }
+
+.ourteam-card .service-card:hover .service-desc, .service-desc:hover a {
+    color: white !important;
+}
+
+.service-desc-ourteam a {
+    text-decoration: none;
+}
+
+.service-desc-ourteam a:hover {
+    text-decoration: underline;
+}
+
 
 .service-card::after {
     content: '';
@@ -345,12 +362,19 @@
     }
 }
 
+.div-serviceTiteImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 0.5rem;
+}
 
 
+.div-serviceTiteImage img{
 
-
-
-
+    margin-bottom: 2.2rem;
+}
 
 
 

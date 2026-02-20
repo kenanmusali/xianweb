@@ -61,12 +61,25 @@ width: 40rem;
 }
 
 .ourteam-card {
-    padding-top: 7.5rem;
+    /* padding-top: 7.5rem; */
+    position: relative;
+    width: 20rem;
+    height: 17rem;
 }
 
 .ourteam-card:hover {
-    padding-top: 6rem;
-    padding-bottom: 0;
+    /* padding-top: 6rem; */
+    /* padding-bottom: 0; */
+}
+
+.ourteam-card img {
+    display: none;
+}
+
+.ourteam-card-Group{
+    position: absolute;
+    bottom: 1.5rem;
+
 }
 
 .CaruselTeam {

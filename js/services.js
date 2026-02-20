@@ -3,14 +3,17 @@
             const closeBtn = document.getElementById('popupCloseBtn');
             const popupTitle = document.getElementById('popupTitle');
             const popupDesc = document.getElementById('popupDesc');
-            const cards = document.querySelectorAll('.service-card');
+            const popupImage = document.getElementById('popupImage');
+            const cards = document.querySelectorAll('.service-card-popup');
 
             function openPopup(card) {
                 const title = card.querySelector('.service-name').innerText;
                 const desc = card.querySelector('.service-desc').innerText;
+                const imageSrc = card.querySelector('.service-icon').src;
                 
                 popupTitle.innerText = title;
                 popupDesc.innerText = desc;  
+                popupImage.src = imageSrc;
                 
                 overlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
