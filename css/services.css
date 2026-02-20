@@ -124,6 +124,12 @@
 .service-card:hover .service-desc {
     color: white !important;
 }
+
+
+.service-card-popup:hover {
+    cursor: pointer;
+}
+
 .service-card-popup:hover .service-name,
 .service-card-popup:hover .service-desc {
     color: white !important;
