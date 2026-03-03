@@ -653,7 +653,35 @@ margin: 0 auto;
 
 
 
+@media (max-width: 768px) {
+    
+.Service-Text-Group p:nth-child(2) {
+    width: fit-content;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--cyan1);
+}
 
+.Service-header {
+    height: 15rem;
+    position: relative;
+    background: var(--background3);
+    overflow: hidden !important;
+    border-radius: 20px;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Service-header img {
+    height: 40%;
+}
+
+.Info-Text-Group {
+    padding: 2rem 0 !important;
+}
+}
 
 
 
