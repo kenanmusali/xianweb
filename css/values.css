@@ -39,6 +39,7 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    padding-inline: 2rem;
 }
 
 .value-card {
@@ -57,8 +58,12 @@
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
-    height: 200px;
+    height: 220px;
     width: 320px;
+}
+
+.services-html {
+    height: 180px;
 }
 
 .value-card:hover {
@@ -87,10 +92,13 @@
     margin-bottom: 8px;
     color: var(--text);
     transition: color 0.3s ease;
+    text-align: center;
+
 }
 
 .value-card:hover .value-name {
     color: #ffffff;
+    text-align: left;
 }
 
 .value-desc {
@@ -133,8 +141,8 @@
     width: 100px;
     height: 100px;
     background: rgba(255, 255, 255, 0.15);
-    -webkit-mask-image: url('/svg/value1.svg');
-    mask-image: url('/svg/value1.svg');
+    /* -webkit-mask-image: url('/svg/value1.svg');
+    mask-image: url('/svg/value1.svg'); */
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -157,7 +165,7 @@
 }
 
 /* Different icons for each value - target cards within their parent groups */
-.value-grp1:nth-child(1) .value-card:nth-child(1)::after {
+/* .value-grp1:nth-child(1) .value-card:nth-child(1)::after {
     -webkit-mask-image: url('/svg/value1.svg');
     mask-image: url('/svg/value1.svg');
 }
@@ -180,7 +188,7 @@
 .value-grp1:nth-child(2) .value-card:nth-child(2)::after {
     -webkit-mask-image: url('/svg/value5.svg');
     mask-image: url('/svg/value5.svg');
-}
+} */
 
 /* Responsive styles for values section */
 
@@ -352,4 +360,94 @@
         right: 10px;
         bottom: 10px;
     }
+}
+
+ .International-freight::after {
+    -webkit-mask-image: url('/svg/flight_takeoff.svg');
+    mask-image: url('/svg/flight_takeoff.svg');
+}
+
+ .Door-to-door-delivery::after {
+    -webkit-mask-image: url('/svg/services6.svg');
+    mask-image: url('/svg/services6.svg');
+}
+
+ .Customs-services::after {
+    -webkit-mask-image: url('/svg/deployed_code_account.svg');
+    mask-image: url('/svg/deployed_code_account.svg');
+}
+
+ .Container-purchase-sale-repair-cleaning::after {
+    -webkit-mask-image: url('/svg/box_add.svg');
+    mask-image: url('/svg/box_add.svg');
+}
+
+  .Loading-and-unloading-operations::after {
+    -webkit-mask-image: url('/svg/services2.svg');
+    mask-image: url('/svg/services2.svg');
+}
+
+ .Warehousing::after {
+    -webkit-mask-image: url('/svg/services5.svg');
+    mask-image: url('/svg/services5.svg');
+}
+
+.groups::after {
+    -webkit-mask-image: url('/svg/groups.svg');
+    mask-image: url('/svg/groups.svg');
+}
+
+.acute::after {
+    -webkit-mask-image: url('/svg/acute.svg');
+    mask-image: url('/svg/acute.svg');
+}
+
+.add-location-alt::after {
+    -webkit-mask-image: url('/svg/add_location_alt.svg');
+    mask-image: url('/svg/add_location_alt.svg');
+}
+
+.support-agent::after {
+    -webkit-mask-image: url('/svg/support_agent.svg');
+    mask-image: url('/svg/support_agent.svg');
+}
+
+.flowsheet::after {
+    -webkit-mask-image: url('/svg/flowsheet.svg');
+    mask-image: url('/svg/flowsheet.svg');
+}
+
+.demography::after {
+    -webkit-mask-image: url('/svg/demography.svg');
+    mask-image: url('/svg/demography.svg');
+}
+
+.construction1::after {
+    -webkit-mask-image: url('/svg/construction1.svg');
+    mask-image: url('/svg/construction1.svg');
+}
+
+.construction2::after {
+    -webkit-mask-image: url('/svg/construction2.svg');
+    mask-image: url('/svg/construction2.svg');
+}
+
+.construction3::after {
+    -webkit-mask-image: url('/svg/construction3.svg');
+    mask-image: url('/svg/construction3.svg');
+}
+
+.construction4::after {
+    -webkit-mask-image: url('/svg/construction4.svg');
+    mask-image: url('/svg/construction4.svg');
+}
+
+.construction5::after {
+    -webkit-mask-image: url('/svg/construction5.svg');
+    mask-image: url('/svg/construction5.svg');
+}
+
+.construction6::after {
+    -webkit-mask-image: url('/svg/construction6.svg');
+    mask-image: url('/svg/construction6.svg');
 }
