@@ -455,3 +455,28 @@
     -webkit-mask-image: url('/svg/construction6.svg');
     mask-image: url('/svg/construction6.svg');
 }
+
+.value1::after {
+    -webkit-mask-image: url('/svg/value1.svg');
+    mask-image: url('/svg/value1.svg');
+}
+
+.value2::after {
+    -webkit-mask-image: url('/svg/value2.svg');
+    mask-image: url('/svg/value2.svg');
+}
+
+.value3::after {
+    -webkit-mask-image: url('/svg/value3.svg');
+    mask-image: url('/svg/value3.svg');
+}
+
+.value4::after {
+    -webkit-mask-image: url('/svg/value4.svg');
+    mask-image: url('/svg/value4.svg');
+}
+
+.value5::after {
+    -webkit-mask-image: url('/svg/value5.svg');
+    mask-image: url('/svg/value5.svg');
+}

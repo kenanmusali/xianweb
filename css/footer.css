@@ -167,6 +167,9 @@
 
 .footer-links {
   opacity: 0.8;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 /* ===== RESPONSIVE STYLES ===== */
@@ -174,6 +177,14 @@
   .footer-section {
     gap: 4rem;
   }
+}
+
+.footer-links a {
+  color: var(--text);
+}
+
+.footer-links a:hover {
+  color: var(--cyan1);
 }
 
 @media (max-width: 992px) {
