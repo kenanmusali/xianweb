@@ -208,6 +208,14 @@
   }
 }
 
+@media (min-width: 768px) {
+  .footer-main-sections {
+  display: flex;
+  gap: 40px;
+  margin: 0 auto;
+  padding: 3rem 0 5rem 0;
+}
+}
 @media (max-width: 768px) {
   .footer-section {
     gap: 2rem;
