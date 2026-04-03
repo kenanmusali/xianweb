@@ -1,0 +1,92 @@
+
+<style>
+    .breadcrumb-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 25px auto;
+    }
+
+    .breadcrumb-line {
+    font-size: 18px !important;
+    font-weight: 600;
+    color: red;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+
+    .breadcrumb-line a {
+    color: #29799b;
+    text-decoration: none;
+    transition: color 0.3s;
+    }
+
+    .breadcrumb-line a:hover {
+    color: #1a5c78;
+    }
+
+    .breadcrumb-line .current {
+    position: relative;
+    color: #29799b;
+    padding-bottom: 6px;
+    }
+
+    .breadcrumb-line .current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #29799b;
+    border-radius: 2px;
+    }
+
+
+</style>
+
+<div class="breadcrumb-wrapper">
+    <div class="breadcrumb-line">
+        <a href="/">@Localizer["Home"]</a>
+        <span>›</span>
+        <span class="current">@Localizer["Video"]</span>
+    </div>
+</div>
+
+<div class="videocollection">
+    <div class="video-collection-container">
+        <div class="video-grid">
+            @foreach (var item in Model)
+            {
+ 
+            <div class="video-item">
+                    <div class="video-thumbnail"  data-video-src="@item.V_Url">
+                    <div class="thumbnail-image">
+                        <img src="@item.V_HeaderImage" alt="Video 1 Thumbnail" />
+                        <div class="play-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                    <div class="video-title">@item.V_Title</div>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+<div class="video-modal" id="videoModal">
+    <div class="modal-content">
+        <button class="lightbox-btn close-btn" title="Close" id="closeModal">
+            <i class="fas fa-times"></i>
+        </button>
+        <br>
+        <video id="modalVideo" controls autoplay>
+            <source id="modalVideoSource" src="" type="video/mp4">
+        </video>
+        <div class="modal-video-title" id="modalVideoTitle"></div>
+    </div>
+</div>
+  <script src="js/videocollection.js"></script>
