@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Video</title>
   <link rel="icon" href="./img/favicon.png" type="image/png" />
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/css/root.css" />
 </head>
 
@@ -208,95 +207,77 @@
     </div>
   </div>
 
-<div class="videocollection">
-    <div class="video-collection-container">
-        <div class="video-grid">
+  <div class="fotogallery">
+    <div class="gallery-grid">
 
-            <!-- Video Thumbnail 1 -->
-            <div class="video-item">
-                <div class="video-thumbnail" data-video-src="./video/video1.mp4">
-                    <div class="thumbnail-image">
-                        <img src="./img/1xian.png" alt="Video 1 Thumbnail" />
-                        <div class="play-overlay">
-                            <div class="play-button">▶</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-title">Video Title 1</div>
-            </div>
 
-            <!-- Video Thumbnail 2 -->
-            <div class="video-item">
-                <div class="video-thumbnail" data-video-src="./video/video2.mp4">
-                    <div class="thumbnail-image">
-                        <img src="./img/2xian.png" alt="Video 2 Thumbnail" />
-                        <div class="play-overlay">
-                            <div class="play-button">▶</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-title">Video Title 2</div>
-            </div>
 
-            <!-- Video Thumbnail 3 -->
-            <div class="video-item">
-                <div class="video-thumbnail" data-video-src="./video/video3.mp4">
-                    <div class="thumbnail-image">
-                        <img src="./img/3xian.png" alt="Video 3 Thumbnail" />
-                        <div class="play-overlay">
-                            <div class="play-button">▶</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-title">Video Title 3</div>
-            </div>
 
-            <!-- Video Thumbnail 4 -->
-            <div class="video-item">
-                <div class="video-thumbnail" data-video-src="./video/video4.mp4">
-                    <div class="thumbnail-image">
-                        <img src="./img/4xian.png" alt="Video 4 Thumbnail" />
-                        <div class="play-overlay">
-                            <div class="play-button">▶</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-title">Video Title 4</div>
-            </div>
+      
+<div class="gallery-item" data-gallery-title="YouTube Videos" data-videourl="https://www.youtube.com/watch?v=tN0tDRCachE">
+    <div class="img-wrapper">
+        <div class="overlay"></div>
+    </div>
+    <div class="gallery-item-content">
+        <p>Emre Aydin - Son Defa</p>
+    </div>
+</div>
 
-            <!-- Video Thumbnail 5 -->
-            <div class="video-item">
-                <div class="video-thumbnail" data-video-src="./video/video5.mp4">
-                    <div class="thumbnail-image">
-                        <img src="./img/1xian.png" alt="Video 5 Thumbnail" />
-                        <div class="play-overlay">
-                            <div class="play-button">▶</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="video-title">Video Title 5</div>
-            </div>
+    </div>
+  </div>
 
+  <div id="lightbox-modal" class="lightbox-modal">
+    <div class="lightbox-content">
+      <div class="lightbox-header">
+        <div class="lightbox-image-info">
+          <span id="current-img-num">1</span> of <span id="total-img">1</span>
         </div>
-    </div>
-</div>
-
-
-<div class="video-modal" id="videoModal">
-    <div class="modal-content">
-        <button class="lightbox-btn close-btn" title="Close" id="closeModal">
+        <div class="lightbox-controls">
+          <button class="lightbox-btn zoom-in" title="Zoom In">
+            <i class="fas fa-search-plus"></i>
+          </button>
+          <button class="lightbox-btn zoom-out" title="Zoom Out">
+            <i class="fas fa-search-minus"></i>
+          </button>
+          <button class="lightbox-btn download-btn" title="Download">
+            <i class="fas fa-download"></i>
+          </button>
+          <button class="lightbox-btn close-btn" title="Close">
             <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightbox-img" src="" alt="">
+      </div>
+      <div class="lightbox-nav">
+        <button class="lightbox-nav-btn prev-btn" title="Previous Image">
+          <i class="fas fa-chevron-left"></i>
         </button>
-        <br>
-        <video id="modalVideo" controls autoplay>
-            <source id="modalVideoSource" src="" type="video/mp4">
-        </video>
-        <div class="modal-video-title" id="modalVideoTitle"></div>
+        <button class="lightbox-nav-btn next-btn" title="Next Image">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="lightbox-footer">
+        <p id="lightbox-caption"></p>
+      </div>
     </div>
-</div>
+  </div>
 
-
-
+  <div id="subgallery-modal" class="subgallery-modal">
+    <div class="subgallery-content">
+      <div class="subgallery-header">
+        <h2 class="subgallery-title">Gallery</h2>
+        <button class="subgallery-close-btn">
+          <i class="fas fa-times"></i> Close
+        </button>
+      </div>
+      <div class="subgallery-body">
+        <div class="subgallery-grid" id="subgallery-grid">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="footer">
     <div class="footer-bg">
@@ -380,7 +361,7 @@
   </div>
 
   <script src="/js/navbar.js"></script>
-  <script src="js/videocollection.js"></script>
+  <script src="js/fotogallery.js"></script>
 </body>
 
 </html>
