@@ -59,7 +59,7 @@
 }
 
 .gallery-item-content {
-    padding: 20px 15px 15px;
+    padding: 10px 0 0 0;
     flex-grow: 1;
 }
 
@@ -67,7 +67,7 @@
     color: var(--text);
     line-height: 1.5;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin: 0;
 }
 
