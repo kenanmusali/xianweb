@@ -367,8 +367,8 @@
 }
 
  .International-freight::after {
-    -webkit-mask-image: url('/svg/flight_takeoff.svg');
-    mask-image: url('/svg/flight_takeoff.svg');
+    -webkit-mask-image: url('/svg/globe.parcel.svg');
+    mask-image: url('/svg/globe.parcel.svg');
 }
 
  .Door-to-door-delivery::after {
