@@ -713,7 +713,7 @@ display: none;}
 
 @media (max-width: 768px) {
     .gallery-grid {
-        grid-template-columns: 1fr; /* force full width */
+        grid-template-columns: 1fr; 
         justify-content: stretch;
     }
 
