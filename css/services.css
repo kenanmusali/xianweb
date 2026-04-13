@@ -596,12 +596,27 @@ margin: 0 auto;
 
 }
 
+.go-back {
+    position: relative;
+width: 50px;
+margin-bottom: -60px;
+margin-left: 5px;
+z-index: 1;
+transition: all 0.3s ease;
+}
+
+.go-back:hover {
+    scale: 1.3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
 .Service-header {
     height: 15rem;
     position: relative;
     background: var(--background3);
     overflow: hidden !important;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 0 5rem;
     display: flex;
  justify-content: space-between;

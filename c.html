@@ -1,0 +1,302 @@
+<!-- @if (ViewBag.CurrentLanguage == "English") { Logo } else if (ViewBag.CurrentLanguage == "中文") { Logo } else if (ViewBag.CurrentLanguage == "Русский") { Logo }
+@Localizer["Home.about"] 
+@Localizer["Company"] @Localizer["Home.Value"] @Localizer["Home.Partner"] @Localizer["Home.Transport"]
+@Localizer["Home.Services"] 
+@Localizer["Services.card1"] @Localizer["Services.card2"] @Localizer["Services.card3"] @Localizer["Services.card4"] @Localizer["Services.card5"] @Localizer["Services.card6"]
+@Localizer["Home.Media"] 
+@Localizer["Home.News"] @Localizer["Home.Photo"] @Localizer["Home.Video"]
+@Localizer["Home.FAQ"]
+@Localizer["Home.Themes"] 
+@Localizer["Mod.Dark"] @Localizer["Mod.Light"] @Localizer["Mod.Auto"]
+@ViewBag.CurrentLanguage 
+UK-English ZHO-中文 RU-Русский
+@Localizer["Home.Contact"] arrow
+@if (ViewBag.CurrentLanguage == "English") { Logo } else if (ViewBag.CurrentLanguage == "中文") { Logo } else if (ViewBag.CurrentLanguage == "Русский") { Logo }
+Menu Close
+@Localizer["Home"]
+@Localizer["Home.about"] 
+@Localizer["Company"] @Localizer["Home.Value"] @Localizer["Home.Partner"] @Localizer["Home.Transport"]
+@Localizer["Services.card1"] @Localizer["Services.card2"] @Localizer["Services.card3"] @Localizer["Services.card4"] @Localizer["Services.card5"] @Localizer["Services.card6"]
+@Localizer["Home.Media"] 
+@Localizer["Home.News"] @Localizer["Home.Photo"] @Localizer["Home.Video"]
+@Localizer["Home.Themes"] 
+@Localizer["Mod.Dark"] @Localizer["Mod.Light"] @Localizer["Mod.Auto"]
+ @ViewBag.CurrentLanguage 
+UK-English ZHO-中文 RU-Русский
+@Localizer["Home.Contact"] arrow
+
+
+
+
+@RenderBody() -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XI'AN</title>
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/css/root.css" />
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
+    <style>
+        .cta-button1 a {
+            width: 100px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .navbar2 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <mysection>
+        <div class="navbar">
+            <div class="nav-space"></div>
+            <div class="nav desktop">
+                <div class="logo">
+                    <a href="/">
+                        @if (ViewBag.CurrentLanguage == "English")
+                        {
+                            <img src="@Url.Content("~/img/logo.png")" alt="Logo" />
+                        }
+                        else if (ViewBag.CurrentLanguage == "中文")
+                        {
+                            <img src="@Url.Content("~/img/logo-ch.png")" alt="Logo" />
+
+                        }
+                        else if (ViewBag.CurrentLanguage == "Русский")
+                        {
+                            <img src="@Url.Content("~/img/logo-ru.png")" alt="Logo" />
+
+                        }
+                    </a>
+                </div>
+
+                <div class="navbar2 ">
+                    <div class="navbar2">
+                        <div class="navbar-inner">
+
+                            <div class="nav-media">
+                                <a class="item">@Localizer["Home.about"]</a>
+                                <img src="/svg/chevron.down.svg" />
+                             
+                                <div class="dropdown-menu">
+                                    <div class="menu-items">
+                                        <a asp-controller="About" asp-action="Index">@Localizer["Company"]</a>
+                                        <a asp-controller="CompanyValues" asp-action="Index">@Localizer["Home.Value"]</a>
+                                        <a asp-controller="Partner" asp-action="Index">@Localizer["Home.Partner"]</a>
+                                        <a asp-controller="Routes" asp-action="Index">@Localizer["Home.Transport"]</a>                                            
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="nav-media">
+                                <a class="item">@Localizer["Home.Services"]</a>
+                                <img src="/svg/chevron.down.svg" />
+
+                                <div class="dropdown-menu">
+                                    <div class="menu-items">
+                                        <a asp-controller="InternationalFreight" asp-action="Index">@Localizer["Services.card1"]</a>
+                                        <a asp-controller="DoorDelivery" asp-action="Index">@Localizer["Services.card2"]</a>
+                                        <a asp-controller="CustomsServices" asp-action="Index">@Localizer["Services.card3"]</a>
+                                        <a asp-controller="ContainerSales" asp-action="Index">@Localizer["Services.card4"]</a>
+                                        <a asp-controller="LoadingAndUnloading" asp-action="Index">@Localizer["Services.card5"]</a>
+                                        <a asp-controller="Warehouseing" asp-action="Index">@Localizer["Services.card6"]</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="nav-media">
+                                <a class="item">@Localizer["Home.Media"]</a>
+                                <img src="/svg/chevron.down.svg" />
+
+                                <div class="dropdown-menu">
+                                    <div class="menu-items">
+                                        <a asp-controller="News" asp-action="Index">@Localizer["Home.News"]</a>
+                                        <a asp-controller="Galery" asp-action="Index">@Localizer["Home.Photo"]</a>
+                                        <a asp-controller="Video" asp-action="Index">@Localizer["Home.Video"]</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a asp-controller="FAQ" class="nav-services" asp-action="Index">
+                                @Localizer["Home.FAQ"]
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="navbar2">
+                        <div class="nav-list themes">
+                            <a class="item">@Localizer["Home.Themes"]</a>
+                            <img class="img1" src="/svg/chevron.down.svg" alt="" />
+                            <div class="dropdown-menu">
+                                <div class="menu-items">
+                                    <a>@Localizer["Mod.Dark"]</a>
+                                    <a>@Localizer["Mod.Light"]</a>
+                                    <a>@Localizer["Mod.Auto"]</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-media language">
+                            <a class="item">@ViewBag.CurrentLanguage</a>
+                            <img src="/svg/chevron.down.svg" />
+
+                            <div class="dropdown-menu">
+                                <div class="menu-items">
+                                    <form asp-controller="Home" asp-action="SetLanguage" method="post" id="langForm">
+                                        <input type="hidden" name="culture" id="selectedCulture" />
+                                        <input type="hidden" name="returnUrl" value="@Context.Request.Path@Context.Request.QueryString" />
+                                        <a href="#" onclick="setLanguage('en-US'); return false;">UK-English</a>
+                                        <a href="#" onclick="setLanguage('zh-CN'); return false;" style="margin-top:-10px">ZHO-中文</a>
+                                        <a href="#" onclick="setLanguage('ru-RU'); return false;" style="margin-top:-10px">RU-Русский</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cta-button1">
+                            <a asp-action="Index" asp-controller="Contact">@Localizer["Home.Contact"]</a>
+                            <img src="/svg/arrow-right.svg" alt="arrow" cursorshover="true">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="nav mobile">
+                <div class="logo">
+                    <a href="/">
+                        @if (ViewBag.CurrentLanguage == "English")
+                        {
+                            <img src="@Url.Content("~/img/logo.png")" alt="Logo" />
+                        }
+                        else if (ViewBag.CurrentLanguage == "中文")
+                        {
+                            <img src="@Url.Content("~/img/logo-ch.png")" alt="Logo" />
+
+                        }
+                        else if (ViewBag.CurrentLanguage == "Русский")
+                        {
+                            <img src="@Url.Content("~/img/logo-ru.png")" alt="Logo" />
+
+                        }
+                    </a>
+                </div>
+
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <img src="/svg/menu-svgrepo-com.svg" alt="Menu" class="menu-icon" />
+                    <img src="/svg/close-svgrepo-com.svg" alt="Close" class="close-icon" />
+                </div>
+
+                <div class="nav-section">
+                    <div class="navbar2">
+                        <div class="nav-media">
+                            <a asp-controller="Home" class="item nav-home" asp-action="Index">@Localizer["Home"]</a>
+                        </div>
+                        <div class="nav-media">
+                            <span>
+                                <a class="item">@Localizer["Home.about"]</a>
+                                <img src="/svg/chevron.down.svg" alt="" />
+                            </span>
+                            <div class="dropdown-menu">
+                                <div class="menu-items">
+                                    <a asp-controller="About" asp-action="Index">@Localizer["Company"]</a>
+                                    <a asp-controller="CompanyValues" asp-action="Index">@Localizer["Home.Value"]</a>
+                                    <a asp-controller="Partner" asp-action="Index">@Localizer["Home.Partner"]</a>
+                                    <a asp-controller="Routes" asp-action="Index">@Localizer["Home.Transport"]</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-media">
+                            <a asp-controller="InternationalFreight" asp-action="Index">@Localizer["Services.card1"]</a>
+                            <a asp-controller="DoorDelivery" asp-action="Index">@Localizer["Services.card2"]</a>
+                            <a asp-controller="CustomsServices" asp-action="Index">@Localizer["Services.card3"]</a>
+                            <a asp-controller="ContainerSales" asp-action="Index">@Localizer["Services.card4"]</a>
+                            <a asp-controller="LoadingAndUnloading" asp-action="Index">@Localizer["Services.card5"]</a>
+                            <a asp-controller="Warehouseing" asp-action="Index">@Localizer["Services.card6"]</a>
+                        </div>
+
+                        <div class="nav-media">
+                            <span>
+                                <a class="item">@Localizer["Home.Media"]</a>
+                                <img src="/svg/chevron.down.svg" />
+                            </span>
+                            <div class="dropdown-menu">
+                                <div class="menu-items">
+                                    <a asp-controller="News" asp-action="Index">@Localizer["Home.News"]</a>
+                                    <a asp-controller="Galery" asp-action="Index">@Localizer["Home.Photo"]</a>
+                                    <a asp-controller="Video" asp-action="Index">@Localizer["Home.Video"]</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-media">
+                            <span>
+                                <a class="item">@Localizer["Home.Themes"]</a>
+                                <img src="/svg/chevron.down.svg" alt="" />
+                            </span>
+                            <div class="dropdown-menu">
+                                <div class="menu-items">
+                                    <a>@Localizer["Mod.Dark"]</a>
+                                    <a>@Localizer["Mod.Light"]</a>
+                                    <a>@Localizer["Mod.Auto"]</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nav-media">
+                            <span>
+                                <img src="/svg/globe.svg" />
+                                <a class="item">@ViewBag.CurrentLanguage</a>
+                                <img src="/svg/chevron.down.svg" alt="" />
+                            </span>
+                            <div class="dropdown-menu">
+                                <div class="menu-items">
+                                    <form asp-controller="Home" asp-action="SetLanguage" method="post" id="langForm">
+                                        <input type="hidden" name="culture" id="selectedCulture" />
+                                        <input type="hidden" name="returnUrl" value="@Context.Request.Path@Context.Request.QueryString" />
+                                        <a href="#" onclick="setLanguage('en-US'); return false;">UK-English</a>
+                                        <a href="#" onclick="setLanguage('zh-CN'); return false;" style="margin-top:-10px">ZHO-中文</a>
+                                        <a href="#" onclick="setLanguage('ru-RU'); return false;" style="margin-top:-10px">RU-Русский</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-media">
+                            <span>
+                                <div class="cta-button1">
+                                    <a asp-controller="Contact" asp-action="Index">@Localizer["Home.Contact"]</a>
+                                    <img src="/svg/arrow-right.svg" alt="arrow" cursorshover="true">
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mysection>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
