@@ -702,3 +702,63 @@ display: none;}
         display: none;
     }
 }
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px)); /* fixed card width */
+    gap: 30px;
+    width: 100%;justify-content: center; 
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* force full width */
+        justify-content: stretch;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .gallery-item .img-wrapper {
+        width: 100%;
+        height: 200px;
+    }
+}
+/* CRITICAL FIX */
+.gallery-item .img-wrapper {
+    position: relative;
+    display: block;
+    height: 200px;
+    width: 100%;            /* FIXED (was 260px) */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Ensure image fills properly */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FIX uneven card stretching */
+.gallery-item {
+    height: auto;           /* FIXED */
+    display: flex;
+    flex-direction: column;
+}
+
+/* FIX text pushing layout */
+.gallery-item-content {
+    padding: 10px 0 0 0;   /* cleaner spacing */
+}
+
+/* SUBGRID FIX */
+.subgallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* changed */
+    gap: 25px;
+    width: 100%;
+}
