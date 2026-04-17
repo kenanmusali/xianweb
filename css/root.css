@@ -62,3 +62,6 @@ html {
 }
 
 
+.highlight, .Ourteam h2, .ourparners h2 {
+    font-weight: 700 !important;
+}
